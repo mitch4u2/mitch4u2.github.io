@@ -1,0 +1,155 @@
+/* ---------------------------------------------
+    Assets
+--------------------------------------------- */
+
+
+/* ---------------------------------------------
+    Colors
+--------------------------------------------- */
+
+$color-1: #837fff; // Malibu
+$color-2: #ff4949; // Sunset Orange
+$color-3: #399d89; // Ocean Green
+
+/* ---------------------------------------------
+    Fonts
+--------------------------------------------- */
+
+$roboto: 'Roboto Condensed', sans-serif; // https://www.google.com/fonts/specimen/Roboto+Condensed
+
+/* ---------------------------------------------
+    Mixins
+--------------------------------------------- */
+
+// Changing body class styles based on number and color
+
+@mixin body-color-choice($choice, $color) {
+  &.choice-#{$choice} {
+    background-color: $color;
+    
+    section {
+      &.background-select {
+        .card {
+          h1 {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Changing color choice styles based on number and color
+
+@mixin color-choice($choice, $color) {
+  &:nth-of-type(#{$choice}) {
+    label {
+      &:before {
+        background-color: $color;
+      }
+              
+      &:after {
+        background-color: lighten($color, 15%);
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------
+    Stylings
+--------------------------------------------- */
+
+
+
+section {
+  &.background-select {
+    width: 300px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 21;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.13);
+    
+    .card {
+      overflow: hidden;
+      @include padding(40px 20px);
+      
+      h1 {
+        font-size: 24px;
+        font-family: $roboto;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-1; // This must be the same color as the active option
+        @include margin(0px null 40px null);
+        @include transition(color .4s ease-in-out);
+      }
+      
+      .color-choices {
+        width: 100%;
+        float: left;
+        position: relative;
+        
+        div {
+          width: 33%;
+          height: 55px;
+          float: left;
+          text-align: center;
+          
+          input {
+            width: 0px;
+            height: 0px;
+            @include position(absolute, -99999px null null -99999px);
+            
+            // This doesn't have to be on screen but it let's search engines still know it's there without you seeing it.
+          }
+          
+          input:checked ~ label:after {
+            width: 65px;
+            height: 65px;
+            @include margin(-32.5px null null -32.5px);
+          }
+          
+          @include color-choice(1, $color-1);
+          
+          @include color-choice(2, $color-2);
+          
+          @include color-choice(3, $color-3);
+          
+          label {
+            width: 55px;
+            height: 55px;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            z-index: 20;
+            
+            &:before {
+              content: "";
+              width: 55px;
+              height: 55px;
+              display: inline-block;
+              background: red;
+              @include position(absolute, 50% null null 50%);
+              @include margin(-27.5px null null -27.5px);
+              border-radius: 50%;
+              @include transition(all .2s ease-in-out);
+              z-index: 10;
+            }
+            
+            &:after {
+              content: "";
+              width: 52px;
+              height: 52px;
+              background-color: rgba(0,0,0,0.3);
+              display: inline-block;
+              @include position(absolute, 50% null null 50%);
+              @include margin(-26px null null -26px);
+              border-radius: 50%;
+              @include transition(all .2s ease-in-out);
+              z-index: 9;
+            }
+            
+            &:hover {
+              cursor: pointer;
+        

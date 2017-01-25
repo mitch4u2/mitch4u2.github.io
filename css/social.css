@@ -1,0 +1,93 @@
+
+
+.planetcos {
+  background-image: url(../img/sun.png);
+    background-size: cover;
+  position: absolute;
+    left: 42%;
+    margin-top: 70px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+    
+}
+.galaxy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7%;
+  
+}
+
+.orbit {
+  width: 400px;
+  height: 400px;
+ 
+  
+  border-radius: 100%;
+
+    
+    
+  -webkit-animation: orbit 12.81216s linear infinite;
+          animation: orbit 12.81216s linear infinite;
+}
+
+
+
+
+
+
+
+.moon {
+ background-image: url(../img/linkedin.png);
+    background-size: cover;
+ cursor: pointer;
+ 
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 70px;
+    
+}
+
+.moon1 {
+  background-image: url(../img/facebook.png);
+    background-size: cover;
+ cursor: pointer;
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 30px;
+    
+}
+
+.moon2 {
+  background-image: url(../img/instagram.png);
+    background-size: cover;
+ cursor: pointer;
+ 
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 50px;
+    
+}
+
+
+@-webkit-keyframes orbit {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

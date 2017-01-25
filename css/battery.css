@@ -1,0 +1,112 @@
+
+
+
+    .battery{
+position: absolute;
+top: 80px;
+left: 10px;
+width: 80px;
+height: 34px;
+border: 2px solid white;
+border-radius: 5px;
+padding: 4px;
+box-sizing: border-box;
+}
+.battery:after{
+content: ' ';
+background: white;
+width: 5px;
+height: 21px;
+position: absolute;
+right: -10px;
+border-radius: 0px 2px 2px 0px;
+top: 4px;
+}
+.juice{
+background:red;
+width:15%;
+height:100%;
+
+    -webkit-animation: mymove 1s ; /* Safari 4.0 - 8.0 */
+    animation: mymove 1s ;
+     -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+    animation-play-state:paused;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+.juicewn{
+background:red;
+width:15%;
+height:100%;
+
+    -webkit-animation: mymove1 1s ; /* Safari 4.0 - 8.0 */
+    animation: mymove1 1s ;
+     -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+    animation-play-state:paused;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+
+
+
+ #screen {
+background-color:black;
+     border-radius: 10px;
+     border: 2px solid darkcyan;
+      
+}
+
+#screenwn {
+background-color:black;
+     border-radius: 10px;
+     border: 2px solid darkcyan;
+      
+}
+
+
+ #screen img{
+     margin-top: -32px;
+     margin-left: -3px
+   }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {width: 10px;background: red}
+    to {width: 62px;background:green }
+}
+
+
+
+@keyframes mymove {
+    from {width: 10px;background: red;}
+    to {width: 65px;background:green;}
+}
+
+
+
+@-webkit-keyframes mymove1 {
+    from {width: 10px;background: red}
+    to {width: 35px;background:green }
+}
+
+
+
+@keyframes mymove1 {
+    from {width: 10px;background: red;}
+    to {width: 35px;background:green;}
+}
+
+
+@-webkit-keyframes mymove2 {
+    
+    50% {width: 35px;background:green; }
+}
+
+
+
+@keyframes mymove2 {
+   
+    50% {width: 35px;background:green; }
+}
