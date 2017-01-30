@@ -62,7 +62,30 @@
 
 		
         
+          <video width="120%" height="120%" style="margin-left:-100px;margin-top:-50px;"id="watchMe" autoplay="true">
+    <source src="gravity.mp4" type="video/mp4"></source>
+</video>
+
+<div id="overlay"></div>
+    
+    
+     <script>
+        var video = document.getElementById('watchMe');
+        var overlay = document.getElementById('overlay');
+       
+         //inst.style.display='none';
+         //document.body.style.overflow = 'hidden';
+
+video.addEventListener('ended', function(){
+        overlay.style.display='none';
+		video.style.display = 'none';
+        terminal();
+     //document.body.style.overflow = 'scroll';
+}, false);
+
         
+        </script>
+		
         
         
         
@@ -71,6 +94,18 @@
         
         <div id="large-header" class="large-header" >
                    
+            
+            
+            <main id="prompt" class="prompt">
+  
+  <p>Your Mission is to save Mission Specialist Ryan Stone and take her back to the Spaceship</p>
+  <p>But First You Need to Click & Hold the planet to Charge Your Battery </p>
+  <p>Good Luck</p>
+</main>
+					
+            
+            
+            
  
 					<canvas id="demo-canvas"></canvas>
 					<section class="main" style="position:absolute;top:240px;right:365px;">
@@ -747,7 +782,11 @@ Real-time traffic monitoring of Various existing roads on the Tunisian Territory
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
         
         
-         <div id="planet-icon" onmouseup="PlayStatelove('paused');" onmousedown="PlayStatelove('running');"></div>
+               
+<canvas id="electric" width="500px" height="300px">
+  </canvas>
+        
+         <div id="planet-icon" onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display='none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display='';"></div>
           <div id="love">
               
               
@@ -1441,7 +1480,8 @@ Yours sincerely, <br>
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDObcmFAqhRAPh-ysr3MOeeV5wyX_zieHk&callback=initMap"></script>
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-AvJMfk3yeM2d9ozK1jUv-9wjDWad3GQ	&callback=initMap"
+  type="text/javascript"></script>
   <script src="assets/js/scripts.js"></script>
 
 

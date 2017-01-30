@@ -180,3 +180,112 @@ window.onclick = function(event) {
        document.getElementById("chat").innerHTML='GOODBYE';
    }
 });
+
+
+
+
+var $lines = $('.prompt p');
+$lines.hide();
+var lineContents = new Array();
+
+var terminal = function() {
+
+  var skip = 0;
+  typeLine = function(idx) {
+    idx == null && (idx = 0);
+    var element = $lines.eq(idx);
+    var content = lineContents[idx];
+    if(typeof content == "undefined") {
+      $('.skip').hide();
+      return;
+    }
+    var charIdx = 0;
+
+    var typeChar = function() {
+      var rand = Math.round(Math.random() * 150) + 25;
+
+      setTimeout(function() {
+        var char = content[charIdx++];
+        element.append(char);
+        if(typeof char !== "undefined")
+          typeChar();
+        else {
+          element.append('<br/><span class="output">' + element.text().slice(9, -1) + '</span>');
+          element.removeClass('active');
+          typeLine(++idx);
+        }
+      }, skip ? 0 : rand);
+    }
+    content = '' + content + '';
+    element.append(' ').addClass('active');
+    typeChar();
+  }
+
+  $lines.each(function(i) {
+    lineContents[i] = $(this).text();
+    $(this).text('').show();
+  });
+
+  typeLine();
+}
+
+
+
+
+
+ var electric = function(){
+  var canvas = document.getElementById("electric");
+  var ctx = canvas.getContext("2d");
+  var cHeight = 200;
+  var boltHeight = 130;
+  
+  function repeatOften(){
+    drawLightning();
+    requestAnimationFrame(repeatOften);
+  };
+  
+  requestAnimationFrame(repeatOften);
+  
+  function drawLightning(){
+    ctx.clearRect(0, 0, 500, 300);
+    var grad = ctx.createLinearGradient(0, 0, 0, 300);
+    grad.addColorStop(0, "black");
+   
+  
+    ctx.strokeStyle = "white";
+    
+    
+    ctx.shadowColor = '#00ffff';
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 0;
+    
+    ctx.beginPath();
+    ctx.lineWidth = 2;
+    ctx.moveTo(0,150);
+    ctx.lineTo(100,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(200,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(300,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(400,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(500,150);
+    ctx.stroke(); 
+    
+    ctx.beginPath();
+    ctx.lineWidth = 4;
+    ctx.moveTo(0,150);
+    ctx.lineTo(100,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(200,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(300,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(400,cHeight/2 - (rand(boltHeight) - boltHeight/2));
+    ctx.lineTo(500,150);
+    ctx.stroke(); 
+  }
+  
+  function rand(ceil){
+    return Math.floor((Math.random() * ceil) + 1); 
+  }
+          
+  canvas.style.display='none';
+}();
+         
+        
