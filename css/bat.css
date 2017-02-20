@@ -206,7 +206,11 @@ div.score-divider {
 }
 
 
-
+#watchMe:hover{
+      cursor: url('../img/rsz_skip1.png'),auto;
+        
+  
+}
 
 
 .modal {
