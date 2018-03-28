@@ -23,22 +23,13 @@
 }
 
 .orbit {
+  margin-top: -30px;
   width: 400px;
   height: 400px;
- 
-  
   border-radius: 100%;
-
-    
-    
   -webkit-animation: orbit 12.81216s linear infinite;
           animation: orbit 12.81216s linear infinite;
 }
-
-
-
-
-
 
 
 .moon {
@@ -67,13 +58,38 @@
 
 .moon2 {
   background-image: url(../img/instagram.png);
-    background-size: cover;
- cursor: pointer;
+  background-size: cover;
+  cursor: pointer;
  
   width: 50px;
   height: 50px;
   border-radius: 100%;
   margin: 50px;
+    
+}
+.moon3 {
+  background-image: url(../img/codepen.png);
+  background-size: cover;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-left: 200px;
+  margin-top: -80px;
+  
+
+    
+}
+.moon4 {
+  background-image: url(../img/github.png);
+    background-size: cover;
+ cursor: pointer;
+ 
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-top: -250px;
+  margin-left: 300px;
     
 }
 
