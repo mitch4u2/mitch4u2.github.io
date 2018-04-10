@@ -380,16 +380,12 @@ td:hover{
 .glow{
     font-family: 'Orbitron', courier, sans-serif;
     font-size:5em;
-    
     text-align:center;
   color:rgba(155, 182, 255, 0.22); 
   text-shadow: 0 0 1px rgba(157,208,154,.3);
     position: absolute;
     left: 42%;
-    margin-top:-20px;
-   /* transform:scaleY(2);*/
-    
-    
+    margin-top:-20px;   
 }
 
 .glow2{
@@ -413,9 +409,7 @@ td:hover{
 
 #skillrow{
     position: absolute;
-    margin-top: -80px;
-  
-    
+    margin-top: -80px;  
 }
 
 
