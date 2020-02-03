@@ -1,432 +1,409 @@
 .cs-text {
-	font-size: 50px;
-	text-transform: uppercase;
-	width: 580px;
-	height: 100px;
-	padding-left: 20px;
-	font-family: 'McLaren', Arial;
-	font-weight: 400;
-	position: relative;
-    
-    
-
-}
-
-
-
-.cs-text:before,
-.cs-text:after {
-	content: " ";
-    display: table;
-    
-}
-
-.cs-text:after {
-	clear: both;
-    
-}
-/* end clearfix hack */
-
-.cs-text span {
-	cursor: default;
-	display: block;
-	float: left;
-	border-radius: 50%;
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
-	text-align: center;
-	margin: 0 0 0 -20px;
-	color: rgba(255,255,255,0.95);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.1);
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
-	-ms-transition: all 0.4s ease-in-out;
-	transition: all 0.4s ease-in-out;
-     
-}
-
-
-
-.cs-text span  blackhole {
-   
-	background: url(../img/black-icon.png) no-repeat center center;
-  background-size:cover;
-   
-    
-    
-    
-}
-
-.cs-text span:nth-child(1) {
-	-webkit-transform: translate(300%) translate(-60px);
-	-moz-transform: translate(300%) translate(-60px);
-	-o-transform: translate(300%) translate(-60px);
-	-ms-transform: translate(300%) translate(-60px);
-   transform: translate(-50px, -50px) translate(50px, 200px);
-      background: url(../img/android.png) no-repeat center center;
-  background-size:contain;
-    position: relative;
-    left: 245px;
-    top:-250px;
-}
-
-.cs-text span:nth-child(2) {
-	-webkit-transform: translate(200%) translate(-40px);
-	-moz-transform: translate(200%) translate(-40px);
-	-o-transform: translate(200%) translate(-40px);
-	-ms-transform: translate(200%) translate(-40px);
-	transform: translate(-50px, -50px) translate(50px, -200px);
-      background: url(../img/css.png) no-repeat center center;
-  background-size:contain;
-     position: relative;
-    left: 155px;
-    top:250px;
-}
-
-.cs-text span:nth-child(3) {
-	-webkit-transform: translate(100%) translate(-20px);
-	-moz-transform: translate(100%) translate(-20px);
-	-o-transform: translate(100%) translate(-20px);
-	-ms-transform: translate(100%) translate(-20px);
-	transform: translate(-100%) translate(-90px);
-      background: url(../img/git.png) no-repeat center center;
-  background-size:contain;
-    left: 350px;
-    top: 5px;
-    
-     position: relative;
-        
-
-}
-
-
-
-.cs-text span:nth-child(6) {
-	-webkit-transform: translate(-200%) translate(40px);
-	-moz-transform: translate(-200%) translate(40px);
-	-o-transform: translate(-200%) translate(40px);
-	-ms-transform: translate(-200%) translate(40px);
-	  transform: translate(-150px, -50px) translate(50px, 300px);
-      background: url(../img/java.png) no-repeat center center;
-  background-size:contain;
-    left: -80px;
-    top:-230px;
-    position: relative;
-
-}
-
-
-
-.cs-text span:nth-child(8) {
-	-webkit-transform: translate(250px, -50px) translate(10px, -50px);
-	-moz-transform: translate(250px, -50px) translate(10px, -50px);
-	-o-transform: translate(250px, -50px) translate(10px, -50px);
-	-ms-transform: translate(250px, -50px) translate(10px, -50px);
-	 transform: translate(-250px, -50px) translate(50px, 300px);
-     background: url(../img/js.png) no-repeat center center;
-  background-size:contain;
-    left: 390px;
-    top:-290px;
-    position: relative;
-
-}
-
-.cs-text span:nth-child(9) {
-	-webkit-transform: translate(200px, -50px) translate(10px, -50px);
-	-moz-transform: translate(200px, -50px) translate(10px, -50px);
-	-o-transform: translate(200px, -50px) translate(10px, -50px);
-	-ms-transform: translate(200px, -50px) translate(10px, -50px);
-	  transform: translate(-350px, -50px) translate(50px, 300px);
-    background: url(../img/php.png) no-repeat center center;
-  background-size:contain;
-    left: 375px;
-    top:-245px;
-    position: relative;
-
-}
-
-.cs-text span:nth-child(10) {
-	-webkit-transform: translate(100px, -50px) translate(10px, -50px);
-	-moz-transform: translate(100px, -50px) translate(10px, -50px);
-	-o-transform: translate(100px, -50px) translate(10px, -50px);
-	-ms-transform: translate(100px, -50px) translate(10px, -50px);
-	 transform: translate(-250px, 50px) translate(50px, 20px);
-    background: url(../img/scrum.png) no-repeat center center;
-    width: 80px;
-    background-size:contain;
-    left: 340px;
-    top:-172px;
-    position: relative;
-
-}
-
-
-.cs-text span:nth-child(7) {
-	-webkit-transform: translate(-300%) translate(60px);
-	-moz-transform: translate(-300%) translate(60px);
-	-o-transform: translate(-300%) translate(60px);
-	-ms-transform: translate(-300%) translate(60px);
-transform: translate(150px, 400px) translate(10px, -50px);
-      background: url(../img/jquery.png) no-repeat center center;
-  background-size:contain;
-    left: -312px;
-    top:-230px;
-    position: relative;
-
-}
-
-.cs-text span:nth-child(11) {
-	-webkit-transform: translate(50px, -50px) translate(10px, -50px);
-	-moz-transform: translate(50px, -50px) translate(10px, -50px);
-	-o-transform: translate(50px, -50px) translate(10px, -50px);
-	-ms-transform: translate(50px, -50px) translate(10px, -50px);
-	transform: translate(150px, 250px) translate(10px, -50px);
-    background: url(../img/mysql.png) no-repeat center center;
-    background-size:contain;
-    width: 80px;
-    left: -112px;
-    top:-290px;
+    font-size: 50px;
+    text-transform: uppercase;
+    width: 580px;
+    height: 100px;
+    padding-left: 20px;
+    font-family: 'McLaren', Arial;
+    font-weight: 400;
     position: relative;
 }
 
-.cs-text span:nth-child(12) {
-	-webkit-transform: translate(-50px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-50px, -50px) translate(10px, -50px);
-	-o-transform: translate(-50px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-50px, -50px) translate(10px, -50px);
-	transform: translate(190px, 180px) translate(10px, -50px);
-    background: url(../img/symfony.png) no-repeat center center;
-  background-size:contain;
-    width: 85px;
-    left: -242px;
-    top:-245px;
-    position: relative;
+    .cs-text:before,
+    .cs-text:after {
+        content: " ";
+        display: table;
+    }
+
+    .cs-text:after {
+        clear: both;
+    }
+    /* end clearfix hack */
+
+    .cs-text span {
+        cursor: default;
+        display: block;
+        float: left;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        margin: 0 0 0 -20px;
+        color: rgba(255,255,255,0.95);
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.1);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+
+
+        .cs-text span blackhole {
+            background: url(../img/black-icon.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .cs-text span:nth-child(1) {
+            -webkit-transform: translate(300%) translate(-60px);
+            -moz-transform: translate(300%) translate(-60px);
+            -o-transform: translate(300%) translate(-60px);
+            -ms-transform: translate(300%) translate(-60px);
+            transform: translate(-50px, -50px) translate(50px, 200px);
+            background: url(../assets/images/skills/azure.png) no-repeat center center;
+            background-size: contain;
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 245px;
+            top: -250px;
+        }
+
+        .cs-text span:nth-child(2) {
+            -webkit-transform: translate(200%) translate(-40px);
+            -moz-transform: translate(200%) translate(-40px);
+            -o-transform: translate(200%) translate(-40px);
+            -ms-transform: translate(200%) translate(-40px);
+            transform: translate(-50px, -50px) translate(50px, -200px);
+            background: url(../assets/images/skills/css.png) no-repeat center center;
+            background-size: contain;
+            position: relative;
+            left: 155px;
+            top: 250px;
+        }
+
+        .cs-text span:nth-child(3) {
+            -webkit-transform: translate(100%) translate(-20px);
+            -moz-transform: translate(100%) translate(-20px);
+            -o-transform: translate(100%) translate(-20px);
+            -ms-transform: translate(100%) translate(-20px);
+            transform: translate(-100%) translate(-90px);
+            background: url(../assets/images/skills/git.png) no-repeat center center;
+            background-size: contain;
+            left: 350px;
+            top: 5px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(6) {
+            -webkit-transform: translate(-200%) translate(40px);
+            -moz-transform: translate(-200%) translate(40px);
+            -o-transform: translate(-200%) translate(40px);
+            -ms-transform: translate(-200%) translate(40px);
+            transform: translate(-150px, -50px) translate(50px, 300px);
+            background: url(../assets/images/skills/csharp.png) no-repeat center center;
+            background-size: contain;
+            width: 80px;
+            height: 80px;
+            left: -80px;
+            top: -230px;
+            position: relative;
+        }
+
+
+
+        .cs-text span:nth-child(8) {
+            -webkit-transform: translate(250px, -50px) translate(10px, -50px);
+            -moz-transform: translate(250px, -50px) translate(10px, -50px);
+            -o-transform: translate(250px, -50px) translate(10px, -50px);
+            -ms-transform: translate(250px, -50px) translate(10px, -50px);
+            transform: translate(-250px, -50px) translate(50px, 300px);
+            background: url(../assets/images/skills/js.png) no-repeat center center;
+            background-size: contain;
+            left: 390px;
+            top: -290px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(9) {
+            -webkit-transform: translate(200px, -50px) translate(10px, -50px);
+            -moz-transform: translate(200px, -50px) translate(10px, -50px);
+            -o-transform: translate(200px, -50px) translate(10px, -50px);
+            -ms-transform: translate(200px, -50px) translate(10px, -50px);
+            transform: translate(-350px, -50px) translate(50px, 300px);
+            background: url(../assets/images/skills/php.png) no-repeat center center;
+            background-size: contain;
+            left: 375px;
+            top: -245px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(10) {
+            -webkit-transform: translate(100px, -50px) translate(10px, -50px);
+            -moz-transform: translate(100px, -50px) translate(10px, -50px);
+            -o-transform: translate(100px, -50px) translate(10px, -50px);
+            -ms-transform: translate(100px, -50px) translate(10px, -50px);
+            transform: translate(-250px, 50px) translate(50px, 20px);
+            background: url(../assets/images/skills/scrum.png) no-repeat center center;
+            width: 80px;
+            background-size: contain;
+            left: 340px;
+            top: -172px;
+            position: relative;
+        }
+
+
+        .cs-text span:nth-child(7) {
+            -webkit-transform: translate(-300%) translate(60px);
+            -moz-transform: translate(-300%) translate(60px);
+            -o-transform: translate(-300%) translate(60px);
+            -ms-transform: translate(-300%) translate(60px);
+            transform: translate(150px, 400px) translate(10px, -50px);
+            background: url(../assets/images/skills/jquery.png) no-repeat center center;
+            background-size: contain;
+            left: -312px;
+            top: -230px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(11) {
+            -webkit-transform: translate(50px, -50px) translate(10px, -50px);
+            -moz-transform: translate(50px, -50px) translate(10px, -50px);
+            -o-transform: translate(50px, -50px) translate(10px, -50px);
+            -ms-transform: translate(50px, -50px) translate(10px, -50px);
+            transform: translate(150px, 250px) translate(10px, -50px);
+            background: url(../assets/images/skills/mysql.png) no-repeat center center;
+            background-size: contain;
+            width: 80px;
+            left: -112px;
+            top: -290px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(12) {
+            -webkit-transform: translate(-50px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-50px, -50px) translate(10px, -50px);
+            -o-transform: translate(-50px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-50px, -50px) translate(10px, -50px);
+            transform: translate(190px, 180px) translate(10px, -50px);
+            background: url(../assets/images/skills/symfony.png) no-repeat center center;
+            background-size: contain;
+            width: 85px;
+            left: -242px;
+            top: -245px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(13) {
+            -webkit-transform: translate(-100px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-100px, -50px) translate(10px, -50px);
+            -o-transform: translate(-100px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-100px, -50px) translate(10px, -50px);
+            transform: translate(170px, 120px) translate(10px, -50px);
+            background: url(../assets/images/skills/vb.png) no-repeat center center;
+            background-size: contain;
+            width: 75px;
+            left: -342px;
+            top: -175px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(5) {
+            -webkit-transform: translate(-100%) translate(20px);
+            -moz-transform: translate(-100%) translate(20px);
+            -o-transform: translate(-100%) translate(20px);
+            -ms-transform: translate(-100%) translate(20px);
+            transform: translate(170%) translate(20px);
+            background: url(../assets/images/skills/html.png) no-repeat center center;
+            background-size: contain;
+            left: -350px;
+            position: relative;
+        }
+
+        .cs-text span:nth-child(14) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-650px, 150px) translate(1050px, -120px);
+            position: relative;
+            width: 80px;
+            left: -395px;
+            top: -28px;
+            background: url(../assets/images/skills/wp.png) no-repeat center center;
+            background-size: contain;
+        }
+
+
+        .cs-text span:nth-child(15) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-50px, -50px) translate(350px, -200px);
+            position: relative;
+            width: 78px;
+            height: 78px;
+            left: -422px;
+            top: 55px;
+            background: url(../assets/images/skills/bootstrap.png) no-repeat center center;
+            background-size: cover;
+        }
+
+
+        .cs-text span:nth-child(16) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-50px, -50px) translate(250px, -200px);
+            position: relative;
+            width: 80px;
+            height: 80px;
+            left: -370px;
+            top: 35px;
+            background: url(../assets/images/skills/netframework.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .cs-text span:nth-child(17) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-50px, -50px) translate(150px, -200px);
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 163px;
+            top: -10px;
+            background: url(../assets/images/skills/angular.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .cs-text span:nth-child(18) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-50px, -50px) translate(10px, -200px);
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 263px;
+            top: -10px;
+            background: url(../assets/images/skills/javaeee.png) no-repeat center center;
+            background-size: cover;
+        }
+
+
+        .cs-text span:nth-child(19) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-40px, -310px) translate(-150px, 7px);
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 280px;
+            top: -35px;
+            background: url(../assets/images/skills/docker.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .cs-text span:nth-child(20) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-40px, -180px) translate(-250px, 7px);
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 280px;
+            top: -90px;
+            background: url(../assets/images/skills/nodejs.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        .cs-text span:nth-child(21) {
+            -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
+            -moz-transform: translate(-150px, -50px) translate(10px, -50px);
+            -o-transform: translate(-150px, -50px) translate(10px, -50px);
+            -ms-transform: translate(-150px, -50px) translate(10px, -50px);
+            transform: translate(-40px, -80px) translate(-250px, 7px);
+            position: relative;
+            width: 82px;
+            height: 82px;
+            left: 250px;
+            top: -167px;
+            background: url(../assets/images/skills/core.png) no-repeat center center;
+            background-size: cover;
+        }
+
+
+
+        .cs-text span:not(:last-child) {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .cs-text span:last-child {
+            cursor: pointer;
+            position: absolute;
+            top: -20%;
+            left: 43%;
+            z-index: 100;
+            width: 120px;
+            height: 120px;
+            background: url(../img/Blackhole.ico) no-repeat center center;
+            background-size: cover;
+            -webkit-animation: spin 1.4s linear infinite;
+            -moz-animation: spin 1.4s linear infinite;
+            animation: spin 1.4s linear infinite;
+        }
+
+
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
 }
 
-.cs-text span:nth-child(13) {
-	-webkit-transform: translate(-100px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-100px, -50px) translate(10px, -50px);
-	-o-transform: translate(-100px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-100px, -50px) translate(10px, -50px);
-	transform: translate(170px, 120px) translate(10px, -50px);
-    background: url(../img/vb.png) no-repeat center center;
-  background-size:contain;
-    width: 75px;
-    left: -342px;
-    top:-175px;
-    position: relative;
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
-.cs-text span:nth-child(5) {
-	-webkit-transform: translate(-100%) translate(20px);
-	-moz-transform: translate(-100%) translate(20px);
-	-o-transform: translate(-100%) translate(20px);
-	-ms-transform: translate(-100%) translate(20px);
-	transform: translate(170%) translate(20px);
-      background: url(../img/html.png) no-repeat center center;
-  background-size:contain;
-    left: -350px;
-   
-    position: relative;
-
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
-.cs-text span:nth-child(14) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-650px, 150px) translate(1050px, -120px);
-    position: relative;
-    width: 80px;
-    left: -395px;
-    top: -28px;
-    
-    background: url(../img/wp.png) no-repeat center center;
-  background-size:contain;
-}
-
-
-.cs-text span:nth-child(15) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-50px, -50px) translate(350px, -200px);
-    position: relative;
-    width: 78px;
-    height: 78px;
-    left: -422px;
-    top: 55px;
-    
-    background: url(../img/bootstrap.png) no-repeat center center;
-  background-size:cover;
-}
-
-
-.cs-text span:nth-child(16) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-50px, -50px) translate(250px, -200px);
-    position: relative;
-    width: 80px;
-    height: 80px;
-    left: -370px;
-    top: 35px;
-    
-    background: url(../img/net.png) no-repeat center center;
-  background-size:cover;
-}
-.cs-text span:nth-child(17) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-50px, -50px) translate(150px, -200px);
-    position: relative;
-    width: 82px;
-    height: 82px;
-    left: 163px;
-    top: -10px;
-    
-    background: url(../img/angula.png) no-repeat center center;
-  background-size:cover;
-}
-
-.cs-text span:nth-child(18) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-50px, -50px) translate(10px, -200px);
-    position: relative;
-    width: 82px;
-    height: 82px;
-    left: 263px;
-    top: -10px;
-    
-    background: url(../img/javaeee.png) no-repeat center center;
-  background-size:cover;
-}
-
-
-.cs-text span:nth-child(19) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-40px, -310px) translate(-150px, 7px);
-    position: relative;
-    width: 82px;
-    height: 82px;
-    left: 280px;
-    top: -35px;
-    
-    background: url(../img/sharepointicon.png) no-repeat center center;
-  background-size:cover;
-}
-.cs-text span:nth-child(20) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-40px, -180px) translate(-250px, 7px);
-    position: relative;
-    width: 82px;
-    height: 82px;
-    left: 280px;
-    top: -90px;
-    
-    background: url(../img/nodejs.png) no-repeat center center;
-  background-size:cover;
-}
-.cs-text span:nth-child(21) {
-	-webkit-transform: translate(-150px, -50px) translate(10px, -50px);
-	-moz-transform: translate(-150px, -50px) translate(10px, -50px);
-	-o-transform: translate(-150px, -50px) translate(10px, -50px);
-	-ms-transform: translate(-150px, -50px) translate(10px, -50px);
-	transform: translate(-40px, -80px) translate(-250px, 7px);
-    position: relative;
-    width: 82px;
-    height: 82px;
-    left: 250px;
-    top: -167px;
-    
-    background: url(../img/thumbnail.png) no-repeat center center;
-  background-size:cover;
-}
-
-
-
-.cs-text span:not(:last-child) {
-	opacity: 0;
-	pointer-events: none;
-    
-    
-}
-
-.cs-text span:last-child{
-    cursor: pointer;
-	position: absolute;
-	top: -20%;
-	left: 43%;
-	z-index: 100;
-    width: 120px;
-    height: 120px;
-	background: url(../img/Blackhole.ico) no-repeat center center;
-    background-size:cover;
-    -webkit-animation:spin 1.4s linear infinite;
-    -moz-animation:spin 1.4s linear infinite;
-    animation:spin 1.4s linear infinite;
-    
-    
-}
-
-
-
-
- @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-.cs-text:active span:not(:last-child){
-	-webkit-transform: translate(0%);
-	-moz-transform: translate(0%);
-	-o-transform: translate(0%);
-	-ms-transform: translate(0%);
-	transform: translate(0%);
-	opacity: 1;
-    
-   
-    
-    
+.cs-text:active span:not(:last-child) {
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -o-transform: translate(0%);
+    -ms-transform: translate(0%);
+    transform: translate(0%);
+    opacity: 1;
 }
 
 .cs-text:active span:last-child {
-	
     width: 120px;
     height: 120px;
-	background: url(../img/Blackhole.ico) no-repeat center center;
-    background-size:cover;
-    
-    -webkit-animation:spin 0.4s linear infinite;
-    -moz-animation:spin 0.4s linear infinite;
-    animation:spin 0.4s linear infinite;
-     
-    
+    background: url(../img/Blackhole.ico) no-repeat center center;
+    background-size: cover;
+    -webkit-animation: spin 0.4s linear infinite;
+    -moz-animation: spin 0.4s linear infinite;
+    animation: spin 0.4s linear infinite;
 }
 
 
-.face-panel{
-     animation: blinker 0.1s linear infinite;
-    
-    
+.face-panel {
+    animation: blinker 0.1s linear infinite;
 }
 
-@keyframes blinker {  
-  50% { opacity: 0.5; }
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
 }
-
