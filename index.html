@@ -128,9 +128,17 @@
                 function togglePlayState(newState) {
                     document.getElementById("battery").style.animationPlayState = newState;
                     document.getElementById("screen").style.animation = 'blinker 1.1s linear 1';
-                    //document.getElementById("example4").innerHTML='THANK YOU';
-                    //document.getElementById("face-panel").style.animationPlayState='paused';
-                    $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () { document.getElementById("chat").innerHTML = 'Thank You ♥ '; });
+                    // document.getElementById("example4").innerHTML='THANK YOU';
+                    // document.getElementById("face-panel").style.animationPlayState='paused';
+                    document.getElementById("astronaut").className += ' shake-hard shake-constant';
+                    document.getElementById("astronaut").style.animationPlayState = newState;
+                    $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function ()
+                    {
+                        // document.getElementById("astronaut").style.animationPlayState = newState
+                        document.getElementById("chat").innerHTML = 'Thank You ♥ ';
+                        // document.getElementById("astronaut").classList.remove("shake-hard shake-constant");
+                        // element.classList.remove("mystyle");
+                    });
                 }
             </script>
 
@@ -282,35 +290,41 @@
 
                 <div class="col-md-8 col-md-pull-4">
                     <div class="short-info wow fadeInUp">
-                        <h3>Objective</h3>
-                        <h4>
+                        <!--<h3>Objective1</h3>-->
+                        <p style="font-size:larger; font-weight: bold;font-stretch:extra-expanded; color:black;">
                             <!--I'm Software Engineer , i also work as a Full stack Web Developer.Most of my time I am developing on JAVA/PHP/jQUERY/CMS, i have an uncodional love for designing and UX, but I like to go beyond my knowledge and pursuing my passion to continuously improve my skills and stay up-to-date with new methods and technologies. I am convinced that this is a good thing to go beyond my comfort zone to see and understand how things works, I'm self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.-->
-                            Mohamed is a well-versed enthusiastic software engineer with a good communication and social skills that brings conviviality to his environment in order to get the creative juices flowing, better articulate ideas and prime the pumps of the clients product vision.
-                            He is interested in software development, software architectures, design patterns and DevOps. With an experience in the oil and gas industry.
-                            Currently he is practiced with c# .Net core, Azure DevOps, Angular and Hexagonal Clean Architecture but he have the energy, flexibility and tools to quickly familiarize with new assignments, businesses and technologies
-
-                            "I believe that everyone we meet knows something that we don’t. It’s up to us to ask the right questions.
-                            A new information acquired can lead to the emergence of new idea, Therefore it should be brainstormed and exposed to constructive criticism, Ultimately solving a problem"
-                        </h4>
+                            <blockquote>
+                                Mohamed is a well-versed enthusiastic software engineer with a good communication and social skills that brings conviviality to his environment in order to get the creative juices flowing, better articulate ideas and prime the pumps of the clients product vision.
+                                He is interested in software development, software architectures, design patterns and DevOps. With an experience in the oil and gas industry.
+                                Currently he is practiced with c# .Net core, Azure DevOps, Angular and Hexagonal Clean Architecture but he have the energy, flexibility and tools to quickly familiarize with new assignments, businesses and technologies
+                            </blockquote>
+                            <br />
+                            <blockquote>
+                                "I believe that everyone we meet knows something that we don’t. It’s up to us to ask the right questions.
+                                A new information acquired can lead to the emergence of new idea, Therefore it should be brainstormed and exposed to constructive criticism, Ultimately solving a problem"
+                            </blockquote>
+                        </p>
                     </div>
 
                     <div class="short-info wow fadeInUp">
-                        <h3>What I Do ?</h3>
-                        <h4>Involved with entrepreneurship and very familiar with the best technologies as Software Development and Web Development. I am always trying to make my own projects which gave me some other skills like (Leadership, project management, communication skills...) .</h4>
+                        <!--<h3>What I Do ?</h3>-->
+                        <!--<h4>Involved with entrepreneurship and very familiar with the best technologies as Software Development and Web Development. I am always trying to make my own projects which gave me some other skills like (Leadership, project management, communication skills...) .</h4>-->
 
                         <ul class="list-check">
-                            <li>UX Design</li>
-                            <li>OOP</li>
+                            <li>Azure DevOps</li>
+                            <li>Cloud Computing</li>
                             <li>Back-End</li>
                             <li>Front-End</li>
-                            <li>Business Intelligence</li>
+                            <li>CI / CD</li>
+                            <li>Unit Testing</li>
+                            <li>Database Design</li>
                             <li>Communication</li>
                         </ul>
                     </div>
                 
                     <div class="download-button">
-                        <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
-                        <a class="btn btn-primary btn-lg" href="assets/MohamedHajjej_cv_en.pdf"><i class="fa fa-download"></i>download my cv</a>
+                        <a class="btn btn-primary btn-lg" href="#contact"><i  class="fa fa-linkedin"></i>Linked-In</a>
+                        <!--<a class="btn btn-primary btn-lg" href="assets/MohamedHajjej_cv_en.pdf"><i class="fa fa-download"></i>download my cv</a>-->
                     </div>
                 
                 </div>
@@ -330,7 +344,7 @@
                     <button class="play scissors" type="button" onclick="play('paper')"></button>
                     <div style="clear:both;"></div></br>
                     <span id="player"></span> <span id="opponent"></span>
-                    <h2 id="results">ROCK,SCISSOR,PAPER</h2>
+                    <h2 id="results">ROCK  SCISSOR  PAPER</h2>
                 </section>
                 <aside class="aside">
                     <div class="scorebox">

@@ -57,7 +57,7 @@
             position: relative;
             width: 82px;
             height: 82px;
-            left: 245px;
+            left: 248px;
             top: -250px;
         }
 
@@ -70,7 +70,7 @@
             background: url(../assets/images/skills/css.png) no-repeat center center;
             background-size: contain;
             position: relative;
-            left: 155px;
+            left: 173px;
             top: 250px;
         }
 
@@ -97,7 +97,7 @@
             background-size: contain;
             width: 80px;
             height: 80px;
-            left: -80px;
+            left: -51px;
             top: -230px;
             position: relative;
         }
@@ -153,8 +153,8 @@
             transform: translate(150px, 400px) translate(10px, -50px);
             background: url(../assets/images/skills/jquery.png) no-repeat center center;
             background-size: contain;
-            left: -312px;
-            top: -230px;
+            left: -280px;
+            top: -235px;
             position: relative;
         }
 
@@ -208,9 +208,9 @@
             transform: translate(170%) translate(20px);
             background: url(../assets/images/skills/html.png) no-repeat center center;
             background-size: contain;
-            left: -350px;
+            left: -340px;
             position: relative;
-        }
+            }
 
         .cs-text span:nth-child(14) {
             -webkit-transform: translate(-150px, -50px) translate(10px, -50px);
@@ -315,7 +315,7 @@
             height: 82px;
             left: 280px;
             top: -90px;
-            background: url(../assets/images/skills/nodejs.png) no-repeat center center;
+            background: url(../assets/images/skills/knockout.png) no-repeat center center;
             background-size: cover;
         }
 
@@ -326,10 +326,10 @@
             -ms-transform: translate(-150px, -50px) translate(10px, -50px);
             transform: translate(-40px, -80px) translate(-250px, 7px);
             position: relative;
-            width: 82px;
-            height: 82px;
+            width: 75px;
+            height: 75px;
             left: 250px;
-            top: -167px;
+            top: -163px;
             background: url(../assets/images/skills/core.png) no-repeat center center;
             background-size: cover;
         }
