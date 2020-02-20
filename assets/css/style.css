@@ -1000,13 +1000,13 @@ Resume Timeline
 
 /* === Skill Section === */
 .skills-section {
-    background:url('../../img/demo-1-bg.jpg') no-repeat center center;
-    
-        background-size: cover;
+    background: url('../../img/demo-1-bg.jpg') no-repeat center center;
+    background-size: cover;
     color: #fff;
-    
-    
+    position: relative;
+    height: 555px;
 }
+
 .skills-section .section-title{
     color: #fff;
     margin-bottom: 110px;

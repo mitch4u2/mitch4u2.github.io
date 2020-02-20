@@ -141,16 +141,18 @@ body {
 .score-divider {
   width: 20%;
 }
-button .play {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 175px;
-  width: 17.5rem;
-  height: 175px;
-  height: 17.5rem;
-  padding: 5px;
-  margin-right: 30px;
-}
+
+/*button .play {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 175px;
+    width: 17.5rem;
+    height: 175px;
+    height: 17.5rem;
+    padding: 5px;
+    margin-right: 30px;
+}*/
+
 button #reset {
   width: 120px;
   width: 12rem;
@@ -310,11 +312,14 @@ div.score-divider {
 
 
 table {
-   
-    background: url('../img/planets.jpg') no-repeat center center;
-    background-size:100% 100%;
+    background: url(../img/planets.jpg) no-repeat center center;
+    background-size: 100% 100%;
     width: 300px;
     height: 550px;
+    width: 300px;
+    height: 550px;
+    position: absolute;
+    right: 0;
 }
 
 
@@ -326,22 +331,41 @@ td:hover{
 }
 
 
-#planet-icon{
-    
+#planet-icon-love {
     cursor: pointer;
-	position: absolute;
+    position: absolute;
     left: 45%;
     margin-top: 15%;
-	z-index: 100;
+    z-index: 100;
     width: 120px;
     height: 120px;
+    /*left: 45%;*/
+    /*top: 201px;*/
     
-	background: url(../img/Blackhole.ico) no-repeat center center;
-    background-size:contain;
-     -webkit-animation:spin 1.4s linear infinite;
-    -moz-animation:spin 1.4s linear infinite;
-    animation:spin 1.4s linear infinite;
+    background: url(../img/Blackhole.ico) no-repeat center center;
+    background-size: contain;
+    -webkit-animation: spin 1.4s linear infinite;
+    -moz-animation: spin 1.4s linear infinite;
+    animation: spin 1.4s linear infinite;
 }
+
+#planet-icon-skills {
+    cursor: pointer;
+    position: absolute;
+    /*left: 45%;*/
+    /*margin-top: 15%;*/
+    z-index: 100;
+    width: 120px;
+    height: 120px;
+    left: 45%;
+    top: 201px;
+    background: url(../img/Blackhole.ico) no-repeat center center;
+    background-size: contain;
+    -webkit-animation: spin 1.4s linear infinite;
+    -moz-animation: spin 1.4s linear infinite;
+    animation: spin 1.4s linear infinite;
+}
+
 #planet-icon:active{
     
     -webkit-animation:spin 0.4s linear infinite;
@@ -381,35 +405,33 @@ td:hover{
     font-family: 'Orbitron', courier, sans-serif;
     font-size:5em;
     text-align:center;
-  color:rgba(155, 182, 255, 0.22); 
-  text-shadow: 0 0 1px rgba(157,208,154,.3);
+    color:rgba(155, 182, 255, 0.22); 
+    text-shadow: 0 0 1px rgba(157,208,154,.3);
     position: absolute;
     left: 42%;
-    margin-top:-20px;   
+    top: 0;
+    /*margin-top:-20px;*/   
 }
 
 .glow2{
     font-size:1.9em;
     text-align:center;
-  font-family: 'haymakerregular';
-  
+    font-family: 'haymakerregular';
     position: absolute;
     left: 25%;
     margin-top:20px;
     width: 600px;
-   
     color: #fff;
-  text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
-  text-decoration: none;
+    text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+    text-decoration: none;
 	outline: 0 none;
    /* transform:scaleY(2);*/
-    
-    
 }
 
 #skillrow{
     position: absolute;
-    margin-top: -80px;  
+    bottom: 0;
+    /*margin-top: -80px;*/  
 }
 
 

@@ -82,19 +82,19 @@
                 <p>Good Luck</p>
             </main>
             <canvas id="demo-canvas"></canvas>
-            <section class="main" 
+            <section class="main"
                      style="position: absolute;
                         left: 50%;
                         margin-left: -302px;
                         top: 50%;
                          ">
                 <!--<section class="main" style="text-align: center;margin: auto; position:absolute;"-->
-                <!--     
+                <!--
                     position: absolute;
                     left: 50%;
                     margin-left: -302px;
                     top: 50%;
-                    margin-top: 180px; 
+                    margin-top: 180px;
                 -->
 
                 <h2 class="cs-text">
@@ -122,7 +122,7 @@
                     <span onmouseup="togglePlayState('paused');" onmousedown="togglePlayState('running');" id="blackhole" class="blackhole"></span>
                 </h2>
             </section>
-            
+
             <!-- Script to pause/start the animation -->
             <script>
                 function togglePlayState(newState) {
@@ -132,8 +132,7 @@
                     // document.getElementById("face-panel").style.animationPlayState='paused';
                     document.getElementById("astronaut").className += ' shake-hard shake-constant';
                     document.getElementById("astronaut").style.animationPlayState = newState;
-                    $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function ()
-                    {
+                    $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
                         // document.getElementById("astronaut").style.animationPlayState = newState
                         document.getElementById("chat").innerHTML = 'Thank You ♥ ';
                         // document.getElementById("astronaut").classList.remove("shake-hard shake-constant");
@@ -236,7 +235,6 @@
         </div>
     </section>
     <!-- End Home Section -->
-    
     <!-- Navigation -->
     <header class="header">
         <nav class="navbar navbar-custom" role="navigation">
@@ -266,7 +264,6 @@
         </nav>
     </header>
     <!-- End Navigation -->
-    
     <!-- About Section -->
     <section id="about" class="about-section section-padding">
         <div class="container">
@@ -321,29 +318,28 @@
                             <li>Communication</li>
                         </ul>
                     </div>
-                
+
                     <div class="download-button">
-                        <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/mohajj" target="_blank"><i  class="fa fa-linkedin"></i>Linked-In</a>
+                        <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/mohajj" target="_blank"><i class="fa fa-linkedin"></i>Linked-In</a>
                         <!--<a class="btn btn-primary btn-lg" href="assets/MohamedHajjej_cv_en.pdf"><i class="fa fa-download"></i>download my cv</a>-->
                     </div>
-                
+
                 </div>
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </section>
     <!-- End About Section -->
-    
     <!-- Video Section -->
     <section id="video" class="video-section">
         <div class="main">
             <div class="container">
                 <section class="content">
-                    </br></br></br>
+                    <!--</br></br></br>-->
                     <button class="play rock" type="button" onclick="play('rock')"></button>
                     <button class="play paper" type="button" onclick="play('scissors')"></button>
-                    <button class="play scissors" type="button" onclick="play('paper')"></button>
-                    <div style="clear:both;"></div></br>
-                    <span id="player"></span> <span id="opponent"></span>
+                    <button class="play scissors" type="button" onclick="play('paper')"></button><br />
+                    <div style="clear:both;"></div></ br>
+                    <span id="player"></span> <span id="opponent"></span> <br />
                     <h2 id="results">ROCK  SCISSOR  PAPER</h2>
                 </section>
                 <aside class="aside">
@@ -360,66 +356,12 @@
         <!--/.overlay-->
     </section>
     <!-- /.Video Section -->
-
     <!-- Resume Section -->
     <section id="resume" class="resume-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Resume</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="resume-title">
-                        <h3>Education</h3>
-                    </div>
-                    <div class="resume">
-                        <ul class="timeline">
-                            <li>
-                                <div class="posted-date">
-                                    <span class="month">2014-2017</span>
-                                </div><!-- /posted-date -->
 
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Engineer's Degree - ESPRIT</h3>
-                                            <span>Software Engineering Specialized in Business Intelligence</span>
-                                        </div><!-- /timeline-heading -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-
-                            <li class="timeline-inverted">
-                                <div class="posted-date">
-                                    <span class="month">2011-2013</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Bachelor's Degree - ISG Sousse</h3>
-                                            <span>Computer science and Management</span>
-                                        </div><!-- /timeline-heading -->
-                                    </div> <!-- /timeline-content -->
-                                </div> <!-- /timeline-panel -->
-                            </li>
-
-                            <li>
-                                <div class="posted-date">
-                                    <span class="month">2008-2011</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Secondary school - IBN RACHIK</h3>
-                                            <span>science and physics</span>
-                                        </div><!-- /timeline-heading -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!-- /row -->
+            <!-- Experience Row -->
 
             <div class="row">
                 <div class="col-md-12">
@@ -428,6 +370,50 @@
                     </div>
                     <div class="resume">
                         <ul class="timeline">
+
+                            <li class="timeline">
+                                <div class="posted-date">
+                                    <span class="month">2020</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3><span class="flag netherlands"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software Engineer - CGI </h3>
+                                            <span>Rotterdam - Netherlands</span>
+                                        </div><!-- /timeline-heading -->
+                                        <!--<div class="timeline-body">
+                                        </div>-->
+                                        <!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">2019-2020</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3><span class="flag netherlands"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software Engineer - CEA Systems </h3>
+                                            <span>Rotterdam - Netherlands</span>
+                                        </div><!-- /timeline-heading -->
+                                        <div class="timeline-body">
+                                            <!--<p>
+                                                • Worked side by side with a highly skilled and professional consultant team to migrate the company main software product Plant4D into a web & cloud based application in a Azure DevOps environment
+                                                • Assisted and contributed in the architectural meeting and technical choices.
+                                                • Configured and managed the Azure virtual machine that contain the rendering server for the high performance visualization of 3D and 2D engineering data of the entire industrial plant
+                                                • Configured a reverse proxy to maintain a secure streaming session via a direct WebSocket connection between the rendering server and the web application.
+                                                Tools Techniques: •.NET Core •Angular 6 •Azure DevOps •IIS
+                                            </p>-->                                        
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
                             <li class="timeline">
                                 <div class="posted-date">
                                     <span class="month">2016-2017</span>
@@ -436,14 +422,13 @@
                                 <div class="timeline-panel wow fadeInUp">
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
-
                                             <h3><span class="flag netherlands"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer - Foursites </h3>
-                                            <span>Foursites - Nijmegen Netherlands</span>
+                                            <span>Didam - Netherlands</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Developing a plugin for wordpress to manage Jira ticketing system and user role and wordpress dashboardp</p>
-                                            <p>developing websites and solving tickets for clients</p>
+                                            <!--<p>Developing a plugin for wordpress to manage Jira ticketing system and user role and wordpress dashboardp</p>
+                                            <p>developing websites and solving tickets for clients</p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -458,13 +443,13 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
 
-                                            <h3><span class="flag france"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer Freelance- Destock Coiff </h3>
-                                            <span>Destock Coiff-Nice France</span>
+                                            <h3><span class="flag france"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer - Destock Coiff </h3>
+                                            <span>Nice - France</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Developing and implementing an Online Store for a French Company using PHP Wordpress and e-commerce </p>
-                                            <p>Designing the website from scratch including the logo </p>
+                                            <!--<p>Developing and implementing an Online Store for a French Company using PHP Wordpress and e-commerce </p>
+                                            <p>Designing the website from scratch including the logo </p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -479,13 +464,13 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
 
-                                            <h3><span class="flag sweden"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer Mission-HABIBI DESIGN </h3>
-                                            <span>Habibi Design - Stockholm Sweden</span>
+                                            <h3><span class="flag sweden"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer - HABIBI DESIGN </h3>
+                                            <span>Stockholm - Sweden</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Developing and implementing an Online Store for a Swedish Company using PHP Wordpress and e-commerce </p>
-                                            <p>Designing the website from scratch including the logo </p>
+                                            <!--<p>Developing and implementing an Online Store for a Swedish Company using PHP Wordpress and e-commerce </p>
+                                            <p>Designing the website from scratch including the logo </p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -501,15 +486,15 @@
                                         <div class="timeline-heading">
 
                                             <h3><span class="flag tunisia"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Developer - Click ERP </h3>
-                                            <span>Tunisie Traffic -Mission</span>
+                                            <span>Ariana - Tunisia</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>
+                                            <!--<p>
                                                 Developing and implementing a web application
                                                 for the the Ministry of Equipment Housing and Planning (Tunisie Trafic)
                                                 Real-time traffic monitoring of Various existing roads on the Tunisian Territory .
-                                            </p>
+                                            </p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -524,14 +509,14 @@
                                     <div class="timeline-content">
                                         <div class="timeline-heading">
 
-                                            <h3><span class="flag tunisia"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business Intelligence developer-Orange</h3>
-                                            <span>Orange - Internship</span>
+                                            <h3><span class="flag tunisia"> </span>Web Developer - Orange</h3>
+                                            <span>Tunis - Tunisia</span>
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Developing an Application for managing OTA keys using PHP Symfony</p>
+                                            <!--<p>Developing an Application for managing OTA keys using PHP Symfony</p>
                                             <p>Monitoring of KPIs and traffic changes using Talend</p>
-                                            <p>Big data Integration of SIM cards information ysing Spago BI</p>
+                                            <p>Big data Integration of SIM cards information ysing Spago BI</p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -547,12 +532,13 @@
                                         <div class="timeline-heading">
 
                                             <h3><span class="flag tunisia"> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web & Mobile Developer - ETC </h3>
-                                            <span>ETC- Graduation Project</span>
+                                            <span>Kairouan- Tunisia</span>
+                                            <!--<span>ETC- Graduation Project</span>-->
                                         </div><!-- /timeline-heading -->
 
                                         <div class="timeline-body">
-                                            <p>Development and designing of android Application to Manage Charity and locate people in need </p>
-                                            <p>Development and designing a web application using PHP Symfony to administrate the android Application</p>
+                                            <!--<p>Development and designing of android Application to Manage Charity and locate people in need </p>
+                                            <p>Development and designing a web application using PHP Symfony to administrate the android Application</p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -562,16 +548,75 @@
                     </div>
                 </div>
             </div><!-- /row -->
+            <!--Education Row-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="resume-title">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2014-2017</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <br />
+                                            <h3>Software Engineeing Degree - ESPRIT</h3>
+                                            <span>Tunis - Tunisia</span>
+                                        </div><!-- /timeline-heading -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="posted-date">
+                                    <span class="month">2011-2013</span>
+                                </div><!-- /posted-date -->
+
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <br />
+                                            <h3>Bachelor's Degree in Computer Science and Management - ISG </h3>
+                                            <span>Sousse - Tunisia</span>
+                                        </div><!-- /timeline-heading -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="posted-date">
+                                    <span class="month">2008-2011</span>
+                                </div><!-- /posted-date -->
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <br />
+                                            <h3>High school - IBN RACHIK</h3>
+                                            <span>Science and Physics Major</span>
+                                        </div><!-- /timeline-heading -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+
         </div><!-- /.container -->
     </section>
     <!-- End Resume Section -->
-    
     <!-- Skills Section -->
     <section id="skills" class="skills-section section-padding">
         <div class="container">
-            
+
             <h1 id="glow" class="glow">SKILLS</h1>
-            <div id="planet-icon" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
+            <div id="planet-icon-skills" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
             <div id="planet">
                 <table>
                     <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025');"></td></tr>
@@ -583,11 +628,11 @@
                     <tr><td onclick="togglePlanet('Earth','1','1','1','1');"></td></tr>
                     <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815');"></td></tr>
                     <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553');"></td></tr>
-]                </table>
+                </table>
 
                 <script>
                     function togglePlanet(Planet, gravity, diameter, length, mass) {
-                        document.getElementById("planet-icon").style.backgroundImage = "url('img/" + Planet + ".ico')";
+                        document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
                         document.getElementById("glow").innerHTML = Planet;
                         document.getElementById("chat").innerHTML = Planet;
 
@@ -679,7 +724,6 @@
         </div><!-- /.container -->
     </section>
     <!-- End Skills Section -->
-    
     <!-- Works Section -->
     <section id="works" class="works-section section-padding">
         <div class="container">
@@ -701,7 +745,7 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-1.png"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-1.png" alt="image">
                                 <div class="portfolio-info">
@@ -717,7 +761,7 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-2.png"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-2.png" alt="image">
                                 <div class="portfolio-info">
@@ -732,7 +776,7 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-3.png"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-3.png" alt="image">
                                 <div class="portfolio-info">
@@ -747,11 +791,11 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-4.png"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-4.png" alt="image">
                                 <div class="portfolio-info">
-                                    <h3>Fatima Design</h3>
+                                    <h3>HABIBI Design</h3>
                                 </div><!-- /.portfolio-info -->
                             </div><!-- /.portfolio -->
                         </div><!-- /.portfolio-bg -->
@@ -762,7 +806,7 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-5.png"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-5.png" alt="image">
                                 <div class="portfolio-info">
@@ -778,7 +822,7 @@
                                 <div class="tt-overlay"></div>
                                 <div class="links">
                                     <a class="image-link" href="assets/images/works/portfolio-7.jpg"><i class="fa fa-search-plus"></i></a>
-                                    <a href="#"><i class="fa fa-link"></i></a>
+                                    <!--<a href="#"><i class="fa fa-link"></i></a>-->
                                 </div><!-- /.links -->
                                 <img src="assets/images/works/portfolio-7.jpg" alt="image">
                                 <div class="portfolio-info">
@@ -792,15 +836,14 @@
         </div><!-- /.container -->
     </section>
     <!-- End Works Section -->
-    
     <!-- Facts Section -->
     <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
 
-        <canvas id="electric" width="500px" height="300px">
+        <canvas id="electric" width="500" height="300">
         </canvas>
 
-        <div id="planet-icon" onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display='none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display='';"></div>
+        <div id="planet-icon-love" onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display='none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display='';"></div>
         <div id="love">
             <script>
                 function PlayStatelove(newState) {
@@ -918,15 +961,14 @@
             </div>
         </div>
         <!-- End AstroWoman -->
-    </section> 
+    </section>
     <!-- End Facts Section -->
-    
     <!-- Blog Section -->
     <section id="blog" class="latest-blog-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Latest Post</h2>
             <div id="myModal1" class="modal1">
-            <!-- Modal content -->
+                <!-- Modal content -->
                 <div class="modal-content1">
                     <span class="close">&times;</span>
                     <div class="color-1">
@@ -958,7 +1000,7 @@
                                         there is no energy as powerful as <strong> L.F.R Love & Fear & Revenge</strong><br>
                                         the <strong>Love</strong> for Success<br>
                                         the <strong>Fear</strong> of Mediocrity<br>
-                                        the <strong>Revenge</strong> of life for not giving you what you want</strong><br>
+                                        the <strong>Revenge</strong> of life for not giving you what you want<br>
                                         find those energies, find them like your life depends on them because you will be surprised by the things you are capable of doing! the effort becomes limitless and infinite.<br>
 
 
@@ -988,7 +1030,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div id="myModal2" class="modal2">
                 <!-- Modal content -->
                 <div class="modal-content2">
@@ -1016,7 +1058,7 @@
 
                                     <h1 style="text-align:center;">#5</h1>
                                     <blockquote>in 2015 my friend needed to pass the java exam so bad, he begged me to pass the exam in his place, i went to his university enter the class sit down and pass a perfect exam and went out, when i reached the door i realized that i wrote my name instead of his in the exam paper  </blockquote>
-                                    </p>
+                                    
                                 </div>
                                 <!-- Related demos -->
                             </div><!-- /content -->
@@ -1024,16 +1066,16 @@
                     </div>
                 </div>
             </div>
-            
-        <div id="myModal4" class="modal4">
-            <!-- Modal content -->
+
+            <div id="myModal4" class="modal4">
+                <!-- Modal content -->
                 <div class="modal-content4">
                     <span class="close">&times;</span>
-                <div class="color-2">
+                    <div class="color-2">
                         <div class="containerblog">
                             <!-- Top Navigation -->
                             <div class="contentblog">
-                            <img src="img/kantoor-foursites.jpg" />
+                                <img src="img/kantoor-foursites.jpg" />
                                 <br><br><br>
 
                                 <div id="planet-icon1" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
@@ -1055,7 +1097,7 @@
                                         Yours sincerely, <br>
                                         <strong>Mohamed Hajjej</strong>
                                     </p>
-                                </p>
+                                    
                                 </div>
                                 <!-- Related demos -->
 
@@ -1112,7 +1154,6 @@
         </div><!-- /.container -->
     </section>
     <!-- End Blog Section -->
-    
     <!-- Hire Section -->
     <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
         <div class="galaxy">
@@ -1128,7 +1169,6 @@
 
     </section>
     <!-- End Hire Section -->
-    
     <!-- Contact Section -->
     <section id="contact" class="contact-section section-padding">
         <div class="container">
@@ -1198,12 +1238,26 @@
     <!-- End Contact Section -->
 
     <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
+       <div class="modal-content">
             <span class="close">&times;</span>
             <p id="modal-content">Some text in the Modal..</p>
         </div>
     </div>
+
+
+    <div id="myModal5" class="modal5">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+            <div class="containerblog">
+                <div class="contentblog">
+                    <p id="modal-content">Some text in the Modal..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Footer Section -->
     <footer class="footer-wrapper">
         <div class="container">
