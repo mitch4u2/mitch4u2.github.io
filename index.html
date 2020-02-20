@@ -149,7 +149,7 @@
                 </div>
                 <div class="neck"></div>
                 <div class="chest">
-                    <div id="four"></div>
+                    
                     <div class="face-panel" id="screen" style="width:100px;height:80px;">
                         <div id="chat" class="chat" style="font-size:15px;margin-left:-10px;">
                             HELP ME ==>
@@ -686,7 +686,7 @@
                 <div id="vib" style="padding-bottom:-600px;" class="row">
                     <div class="col-md-6">
                         <div class="skill-progress">
-                            <div class="skill-title"><h3 id="gravity">Code</h3></div>
+                            <div class="skill-title"><h3 id="gravity">Coding</h3></div>
                             <div class="progress">
                                 <div id="gravprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
                                     <span>95%</span>
@@ -695,7 +695,7 @@
                         </div><!-- /.skill-progress -->
 
                         <div class="skill-progress">
-                            <div class="skill-title"><h3 id="diameter">Design</h3></div>
+                            <div class="skill-title"><h3 id="diameter">Business savvy</h3></div>
                             <div class="progress">
                                 <div id="diamprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
                                     <span>80%</span>
@@ -703,7 +703,7 @@
                             </div><!-- /.progress -->
                         </div><!-- /.skill-progress -->
                         <div class="skill-progress">
-                            <div class="skill-title"><h3 id="length">Creativity</h3></div>
+                            <div class="skill-title"><h3 id="length">Communication</h3></div>
                             <div class="progress">
                                 <div id="lenprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                     <span>75%</span>
@@ -711,7 +711,7 @@
                             </div><!-- /.progress -->
                         </div><!-- /.skill-progress -->
                         <div class="skill-progress">
-                            <div class="skill-title"><h3 id="mass">Motivation</h3></div>
+                            <div class="skill-title"><h3 id="mass">Problem Solving</h3></div>
                             <div class="progress">
                                 <div id="massprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                     <span>75%</span>
@@ -840,13 +840,24 @@
     <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
 
-        <canvas id="electric" width="500" height="300">
-        </canvas>
+        <!--<canvas id="electric" class="she">
+    </canvas>
+    <canvas id="electric" class="he">
+    </canvas>-->
 
-        <div id="planet-icon-love" onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display='none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display='';"></div>
+        <canvas id="electric"   height="200"></canvas>
+        <!--<canvas id="electric2" height="200"></canvas>-->
+        <div id="planet-icon-love"
+             onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
+        </div>
+        <!--<div id="planet-icon-love" 
+             onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
+        </div>-->
         <div id="love">
             <script>
+               
                 function PlayStatelove(newState) {
+                    // newState = "paused"
                     document.getElementById("batterywn").style.animationPlayState = newState;
                     document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
                     document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
@@ -1173,6 +1184,14 @@
     <section id="contact" class="contact-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Get in touch</h2>
+            
+            <form action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8">
+                <input id="email" name="email" type="email" />
+                <textarea id="comment" name="comment"></textarea>
+                <input id="submit" name="submit" type="Submit" />
+            </form>
+
+
 
             <div class="row">
                 <div class="col-md-6">
@@ -1245,7 +1264,7 @@
     </div>
 
 
-    <div id="myModal5" class="modal5">
+    <!--<div id="myModal5" class="modal5">
         <div class="modal-content">
         <span class="close">&times;</span>
             <div class="containerblog">
@@ -1254,7 +1273,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
 
 
@@ -1290,15 +1309,15 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="assets/js/jquery.fitvids.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-AvJMfk3yeM2d9ozK1jUv-9wjDWad3GQ	&callback=initMap"
-            type="text/javascript"></script>
+    <!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-AvJMfk3yeM2d9ozK1jUv-9wjDWad3GQ	&callback=initMap"
+            type="text/javascript"></script>-->
     <script src="assets/js/scripts.js"></script>
 
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
     <script src="js/rAF.js"></script>
     <script src="js/demo-1.js"></script>
-    <script src="js/astro.js"></script>
+    <!--<script src="js/astro.js"></script>-->
     <script src="js/bat.js"></script>
 
 </body>

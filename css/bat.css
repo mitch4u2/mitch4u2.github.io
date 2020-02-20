@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'haymakerregular';
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot");
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.svg#haymakerregular") format("svg");
+  /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot");*/
+  /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.svg#haymakerregular") format("svg");*/
   font-weight: normal;
   font-style: normal;
 }
@@ -526,14 +526,15 @@ $moon-color: #9E9E9E;
   }
 }
 
-// Animations
+/*// Animations
 @keyframes orbit {
-  to {
-    transform: rotate(360deg);
-  }
+  to
+{
+    myModal5 transform: rotate(360deg);
 }
+}*/
 
-#four{
+/*#four{
     position: absolute;
     margin-left: 35px;
     margin-top: 10px;
@@ -543,7 +544,7 @@ $moon-color: #9E9E9E;
     background-size: cover;
     cursor: pointer;
     display: none;
-}
+}*/
 
 
 
@@ -586,13 +587,29 @@ display:none;
 }
 
 
-#electric{
-  
-  position:absolute;
-  width: 980px;
-    margin-left: -450px;
-  
+#electric {
+    /*position: absolute;
+    width: 400px;
+    margin-top: 70px;*/
+    
+    /*transform: rotate(180deg) scaleX(1);
+    transform: rotate(180deg) scaleX(-1);*/
+    position: absolute;
+    width: 1000px;
+    /*height: 150px;*/
+    left: 220px;
+    margin-top: -290px;
 }
+
+
+/*#electric2 {
+    transform: rotate(180deg) scaleX(1);
+    transform: rotate(180deg) scaleX(-1);
+    position: absolute;
+    width: 900px;
+    left: 250px;
+    margin-top: -100px;
+}*/
 
 
 
