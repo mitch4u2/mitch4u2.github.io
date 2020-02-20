@@ -1184,25 +1184,20 @@
     <section id="contact" class="contact-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Get in touch</h2>
-            
-            <form action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8">
-                <input id="email" name="email" type="email" />
-                <textarea id="comment" name="comment"></textarea>
-                <input id="submit" name="submit" type="Submit" />
-            </form>
-
-
-
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact-form">
                         <strong>Send me a message</strong>
-                        <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
 
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control" id="name" required="">
-                            </div>
+
+                        <form action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8 name="contact-form" id="contactForm"">
+                            <input id="email" name="email" type="email" />
+                            <textarea id="comment" name="comment"></textarea>
+                            <input id="submit" name="submit" type="Submit" />
+                        </form>
+
+
+                        <form name="contact-form" id="contactForm" action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8">
 
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -1210,16 +1205,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" name="subject" class="form-control" id="subject">
-                            </div>
-
-                            <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                                <textarea name="coment" class="form-control" id="comment" rows="5" required=""></textarea>
                             </div>
-
-                            <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                            <input id="submit" name="submit" type="Submit" class="btn btn-primary"/>
+                            <!--<button type="submit" name="submit" class="btn btn-primary">Send Message</button>-->
                         </form>
                     </div><!-- /.contact-form -->
                 </div><!-- /.col-md-6 -->
