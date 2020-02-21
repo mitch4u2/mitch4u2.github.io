@@ -90,12 +90,12 @@
                          ">
                 <!--<section class="main" style="text-align: center;margin: auto; position:absolute;"-->
                 <!--
-                    position: absolute;
-                    left: 50%;
-                    margin-left: -302px;
-                    top: 50%;
-                    margin-top: 180px;
-                -->
+            position: absolute;
+            left: 50%;
+            margin-left: -302px;
+            top: 50%;
+            margin-top: 180px;
+        -->
 
                 <h2 class="cs-text">
                     <span></span>
@@ -127,6 +127,7 @@
             <script>
                 function togglePlayState(newState) {
                     document.getElementById("battery").style.animationPlayState = newState;
+                    // document.getElementById("blackhole").style.animationPlayState = newState;
                     document.getElementById("screen").style.animation = 'blinker 1.1s linear 1';
                     // document.getElementById("example4").innerHTML='THANK YOU';
                     // document.getElementById("face-panel").style.animationPlayState='paused';
@@ -141,15 +142,19 @@
                 }
             </script>
 
+
+            
             <div id="astronaut" class="astronaut">
-                <div class="head">
+
+                <div class="head" style="z-index:100">
                     <div class="glass">
                         <div class="reflect"></div>
                     </div>
                 </div>
+
                 <div class="neck"></div>
                 <div class="chest">
-                    
+
                     <div class="face-panel" id="screen" style="width:100px;height:80px;">
                         <div id="chat" class="chat" style="font-size:15px;margin-left:-10px;">
                             HELP ME ==>
@@ -161,6 +166,9 @@
                 </div>
 
                 <div class="back"></div>
+                <div class="astronaut__cord">
+                    <canvas id="cord" height="500" width="500"></canvas>
+                </div>
                 <div class="arm left">
                     <div class="top-arm"></div>
                     <div class="bottom-arm"></div>
@@ -635,7 +643,6 @@
                         document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
                         document.getElementById("glow").innerHTML = Planet;
                         document.getElementById("chat").innerHTML = Planet;
-
                         document.getElementById("gravity").innerHTML = 'Gravity';
                         document.getElementById("diameter").innerHTML = 'Diameter';
                         document.getElementById("length").innerHTML = 'Length of the Day';
@@ -656,6 +663,30 @@
                         document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
                         document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
 
+
+
+                        // Change the planet icon width in propportion with earth mass width
+                        //document.getElementById("planet-icon-skills").style.width = (120 * mass) + "px";
+                        // it didn4t work because the difference between planet masses are huge 
+
+
+                        // Planet Sound
+                        var x = document.getElementById("planet-icon-skills");
+                        var audio = new Audio("assets/planetsound/" + Planet + ".mp3");
+                        x.onmousedown = function ()
+                        {
+                            audio.play();
+                            document.getElementById("planet-icon-skills").style.animation = "spin 0.5s linear infinite";
+
+                        };
+                        x.onmouseup = function ()
+                        {
+                            audio.pause();
+                            document.getElementById("planet-icon-skills").style.animation = "spin 1.4s linear infinite";
+
+                        };
+                        // END Planet Sound
+                       
                         /*document.getElementById("testa").css('width', document.getElementById("testa").attr('aria-valuenow')+'44%');*/
                         /*document.getElementById("screen").style.animation='blinker 1.1s linear 1';
                         //document.getElementById("example4").innerHTML='THANK YOU';
@@ -673,7 +704,7 @@
                         document.getElementById("glow").className += ' shake-hard shake-constant';
                         document.getElementById("glow").style.animationPlayState = newState;
                         document.getElementById("chat").innerHTML = 'STOP IT !';
-
+                        
                         //document.getElementById("example4").innerHTML='THANK YOU';
                         //document.getElementById("face-panel").style.animationPlayState='paused';
                         $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () { document.getElementById("chat").innerHTML = 'Thank You ♥ '; });
@@ -855,9 +886,7 @@
         </div>-->
         <div id="love">
             <script>
-               
                 function PlayStatelove(newState) {
-                    // newState = "paused"
                     document.getElementById("batterywn").style.animationPlayState = newState;
                     document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
                     document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
@@ -865,15 +894,24 @@
                     document.getElementById("astronaut").className += ' shake-hard shake-constant';
                     document.getElementById("astronaut").style.animationPlayState = newState;
 
+
                     document.getElementById("astrowoman").className += ' astronaut'
 
                     document.getElementById("chat").innerHTML = 'I love you...';
+
+                   
+
+
 
                     //document.getElementById("example4").innerHTML='THANK YOU';
 
                     //document.getElementById("face-panel").style.animationPlayState='paused';
 
-                    $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () { document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥'; });
+                    $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+                        document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
+                        
+
+                    });
                 }
             </script>
             <!--<img src="img/planets.jpg" >-->

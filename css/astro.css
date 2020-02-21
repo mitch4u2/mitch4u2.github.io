@@ -47,7 +47,15 @@ Reflect : #18426b;
 .arm{position: absolute;}
 
 /*	Arm left 	*/
-.arm.left{top:100px;left: 12px;transform:rotate(80deg);transform-origin: 0 0;z-index: 20;-webkit-animation: armDownLeft 20s infinite;animation: armDownLeft 20s infinite;}
+	.arm.left {
+		top: 100px;
+		left: 12px;
+		z-index: 20;
+		transform: rotate(80deg);
+		transform-origin: 0 0;
+		-webkit-animation: armDownLeft 20s infinite;
+		animation: armDownLeft 20s infinite;
+	}
 .arm.left .top-arm{background: #fefefe;width: 20px;height: 80px;}
 .arm.left .bottom-arm{background: #fefefe;width: 20px;height: 70px;transform:rotate(-40deg);transform-origin: 0 0;margin:0px 0 0 -2px;border-radius: 5px 5px 0 0;}
 
@@ -57,7 +65,15 @@ Reflect : #18426b;
 .arm.left .fingers{position: relative;background: #dee7de;width: 20px;height: 30px;border-radius: 15px;margin-top: -22px;margin-left: 50px;transform: rotate(-50deg);}
 
 /*	Arm right 	*/
-.arm.right{top:120px;left: 82px;transform:rotate(-95deg);transform-origin: 0 0;z-index:20;-webkit-animation: armDownRight 20s infinite;animation: armDownRight 20s infinite;}
+.arm.right{
+	top:120px;
+	left: 82px;
+	z-index:20;
+	transform:rotate(-95deg);
+		transform-origin: 0 0;
+		-webkit-animation: armDownRight 20s infinite;
+		animation: armDownRight 20s infinite;
+}
 .arm.right .top-arm{background: #fefefe;width: 20px;height: 80px;}
 .arm.right .bottom-arm{background: #fefefe;width: 20px;height: 70px;transform:rotate(-40deg);margin:-15px 0 0 18px;border-radius: 5px 5px 0 0;}
 
@@ -104,7 +120,14 @@ Reflect : #18426b;
 .boot-right .end {position: relative;background: #fefefe;width: 70px;height: 20px;border-radius: 25px 0 0 0 / 30px 0 0 0;margin-left:-35px;margin-top: -1px;}
 .boot-right .sole{width: 70px;height: 10px;margin:-35px;margin:-5px 0 0 -35px;}
 
+/* Cord */
 
+.astronaut__cord {
+	position: absolute;
+	left: 70%;
+	top: -10px;
+	transform: translate(-50%, -50%) rotate(-90deg) scale(1.2);
+}
 
 /*	Media queries 	*/
 @media screen and (min-width:931px){
