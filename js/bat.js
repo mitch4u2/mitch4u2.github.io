@@ -77,8 +77,6 @@ var play = function(userChoice) {
 		document.getElementById("loses").style.fontSize="44";
 	}
     if (wins > 9) {
-        console.log("Hello");
-        // console.log(modal5);
         // modal5.style.display = "block";
         document.getElementById("modal-content").innerHTML="<p>You reached the max score of 10. <br /><br /><br /><br /><br /><br /><br /><br /><br />Congratulations, you have no life.</p>";
         loses = 0;
@@ -86,8 +84,6 @@ var play = function(userChoice) {
 		//alert("You reached the max score of 10. <br />Congratulations, you have no life.");
 	}
     if (loses > 9) {
-        console.log("Hello");
-        // console.log(modal5);
         // modal5.style.display = "block";
         document.getElementById("modal-content").innerHTML="<p>Your opponent reached the max score of 10. <br /><br /><br /><br /><br /><br /><br /><br />We're sorry, you have no life.</p>";
         loses = 0;
@@ -102,7 +98,6 @@ var reset = function() {
 	document.getElementById("wins").innerHTML=wins;
 	document.getElementById("loses").innerHTML=loses;
 };
-
 
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -163,7 +158,46 @@ window.onclick = function(event) {
 
 
 
- $(window).scroll(function() {   
+$(window).scroll(function () {
+
+
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > 700) {
+        document.getElementById('blackhole').style.display = 'none';
+        document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
+        document.getElementById('astrocord').style.left = '-185px';
+        document.getElementById('astrocord').style.top = '-21%';
+        // left: -165px;
+        // top: -21 %;
+        // transform: rotate(90deg)//;
+    }
+    else {
+        document.getElementById('blackhole').style.display = 'block';
+        //document.getElementById('astrocord').style.transform = '';
+        //document.getElementById('astrocord').style.left = '';
+        //document.getElementById('astrocord').style.top = '';
+
+        document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
+        document.getElementById('astrocord').style.left = '-185px';
+        document.getElementById('astrocord').style.top = '-21%';
+        
+    }
+    if ($(window).scrollTop() > 5000)
+    {
+        document.getElementById('astro-wrap-shela').style.display = 'block';// should be block
+    }
+    else {
+        document.getElementById('astro-wrap-shela').style.display = 'none';
+    }
+
+    //if ($(window).scrollTop() + $(window).height() < $(document).height() - 100) {
+    //    // document.getElementById('armright').style.animation = 'armDownRight 1s infinite';
+    //    // document.getElementById('armleft').style.animation = 'armDownRight 1s infinite';
+    //       document.getElementById('astrowoman').style.display = 'none';
+    //    // document.getElementById("chatwn").innerHTML = 'GOODBYE';
+    //    // document.getElementById("chat").innerHTML = 'GOODBYE';
+    //}
+
    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
        document.getElementById('armright').style.animation='armDownRight 1s infinite';
         document.getElementById('armleft').style.animation='armDownRight 1s infinite';
@@ -280,14 +314,16 @@ var electric = function () {
   // canvas2.style.display = 'none';
 }();
 
-//Astraunot Cord
-         
+
+
+
+//Astraunot Cord        
 const cordCanvas = document.getElementById('cord');
 const ctx = cordCanvas.getContext('2d');
 
 let y1 = 160;
-let y2 = 100;
-let y3 = 100;
+let y2 = 350;
+let y3 = 800;
 
 let y1Forward = true;
 let y2Forward = false;
@@ -295,14 +331,33 @@ let y3Forward = true;
 
 function animate() {
     requestAnimationFrame(animate);
+
+
+    
+
+    var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+    gradient.addColorStop("0", "#A9A9A9");// dark grey
+    gradient.addColorStop("1.0", "#F5F5F5");// white smoke
+    gradient.addColorStop("0.5", "#A9A9A9");
+
+    // Fill with gradient
+   
+
+
+
     ctx.clearRect(0, 0, innerWidth, innerHeight);
-
     ctx.beginPath();
-    ctx.moveTo(130, 170);
-    ctx.bezierCurveTo(250, y1, 345, y2, 400, y3);
+    // ADDED 300 PX
+    ctx.moveTo(150, 150);
+    ctx.bezierCurveTo(70, y1, 355, y2, -200, y3);
+    // ctx.bezierCurveTo(250, y1, 345, y2, -90, y3);
 
-    ctx.strokeStyle = 'white';
+    // ctx.strokeStyle = 'white';
+    ctx.strokeStyle = gradient;
     ctx.lineWidth = 8;
+    // ctx.lineWidth = 5;
+    // ctx.strokeRect(20, 20, 150, 100);
+    //ctx.lineHeight = 180;
     ctx.stroke();
 
 
@@ -322,18 +377,18 @@ function animate() {
         y2Forward = false;
     }
 
-    if (y3 === 100) {
+    if (y3 === -100) {
         y3Forward = true;
     }
 
-    if (y3 === 317) {
+    if (y3 === -100) {
         y3Forward = false;
     }
 
-    y1Forward ? y1 += 1 : y1 -= 1;
+    // y1Forward ? y1 += 1 : y1 -= 1;
     y2Forward ? y2 += 1 : y2 -= 1;
-    y3Forward ? y3 += 1 : y3 -= 1;
+    // y3Forward ? y3 += 1 : y3 -= 1;
 }
 
 // drawVisor();
-animate();      
+animate();

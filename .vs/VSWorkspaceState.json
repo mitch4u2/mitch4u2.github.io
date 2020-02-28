@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets\\js",
+    "\\css",
     "\\js"
   ],
-  "SelectedNode": "\\assets",
+  "SelectedNode": "\\css\\bat.css",
   "PreviewInSolutionExplorer": false
 }

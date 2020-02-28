@@ -76,26 +76,25 @@
 
         <div id="large-header" class="large-header">
             <main id="prompt" class="prompt">
-                <p>Your Mission is to save Mission Specialist Luna Xin and take her back to the Spaceship</p>
+                <p>Your Mission is to save Mission Specialist Luna and take her back to the Spaceship</p>
                 <p>But First you need to Charge Your Battery:</p>
-                <p>You Need to Click & Hold the planet </p>
+                <p>Click & Hold the planet </p>
                 <p>Good Luck</p>
             </main>
             <canvas id="demo-canvas"></canvas>
             <section class="main"
                      style="position: absolute;
-                        left: 50%;
-                        margin-left: -302px;
-                        top: 50%;
-                         ">
+                            left: 50%;
+                            margin-left: -302px;
+                            top: 50%; ">
                 <!--<section class="main" style="text-align: center;margin: auto; position:absolute;"-->
                 <!--
-            position: absolute;
+        position: absolute;
             left: 50%;
             margin-left: -302px;
-            top: 50%;
+                top: 50%;
             margin-top: 180px;
-        -->
+             -->
 
                 <h2 class="cs-text">
                     <span></span>
@@ -140,11 +139,58 @@
                         // element.classList.remove("mystyle");
                     });
                 }
+
+
+                //DRAG DROP
+                function allowDrop(ev) {
+                    ev.preventDefault();
+                    //console.log("Allow Drop");
+                }
+
+                function drag(ev) {
+                    ev.dataTransfer.setData("text", ev.target.id);
+                    //console.log(ev.target.id);
+
+                }
+
+                function drop(ev) {
+                    ev.preventDefault();
+                    var data = ev.dataTransfer.getData("text");
+                    ev.target.appendChild(document.getElementById(data));
+                    //console.log("DROP");
+                    document.getElementById("batterywn").style.animationPlayState = "running";
+                    document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
+                    document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
+                    document.getElementById("battery").style.animation = 'mymove2 1s';
+                    // document.getElementById("armleft").style.animation = 'armByeRight 1.1s linear infinite';
+                    // document.getElementById("astronaut").className += ' shake-hard shake-constant';
+                    // document.getElementById("astronaut").style.animation = "armByeRight";
+
+                    document.getElementById("astro-wrap-shela").style.transform = 'rotate(-64deg)';
+                    document.getElementById("astro-wrap-shela").style.right = '20%';
+                    document.getElementById("astro-wrap-shela").style.marginTop = '-42%';
+
+                    document.getElementById("astrocord").style.marginLeft = '-400px';
+                    // document.getElementById('astrocord').style.top = '-21%';
+                    // document.getElementById("astrocord").style.top = '-21%';
+                    // document.getElementById("astrowoman").className += ' astronaut';
+                    document.getElementById("chat").innerHTML = 'I love you...';
+                    $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+                        document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
+                    });
+
+                }
             </script>
 
+            <div id="astrocord" class="astronaut__cord">
+                <canvas id="cord" height="600" width="500" draggable="true" ondragstart="drag(event)"></canvas>
+            </div>
 
-            
-            <div id="astronaut" class="astronaut">
+            <div class="astro-wrap">
+                <a class="astronaut-real" href="#" title="return to base"></a>
+            </div>
+
+            <div id="astronaut" class="astronaut" style="display:none;">
 
                 <div class="head" style="z-index:100">
                     <div class="glass">
@@ -166,10 +212,9 @@
                 </div>
 
                 <div class="back"></div>
-                <div class="astronaut__cord">
-                    <canvas id="cord" height="500" width="500"></canvas>
-                </div>
-                <div class="arm left">
+
+                <!--  CORD WAS HERE -->
+                <div class="arm left" id="armleft">
                     <div class="top-arm"></div>
                     <div class="bottom-arm"></div>
                     <div class="hand-left"></div>
@@ -416,7 +461,7 @@
                                                 • Configured and managed the Azure virtual machine that contain the rendering server for the high performance visualization of 3D and 2D engineering data of the entire industrial plant
                                                 • Configured a reverse proxy to maintain a secure streaming session via a direct WebSocket connection between the rendering server and the web application.
                                                 Tools Techniques: •.NET Core •Angular 6 •Azure DevOps •IIS
-                                            </p>-->                                        
+                                            </p>-->
                                         </div><!-- /timeline-body -->
                                     </div> <!-- /timeline-content -->
                                 </div> <!-- /timeline-panel -->
@@ -667,26 +712,24 @@
 
                         // Change the planet icon width in propportion with earth mass width
                         //document.getElementById("planet-icon-skills").style.width = (120 * mass) + "px";
-                        // it didn4t work because the difference between planet masses are huge 
+                        // it didn4t work because the difference between planet masses are huge
 
 
                         // Planet Sound
                         var x = document.getElementById("planet-icon-skills");
                         var audio = new Audio("assets/planetsound/" + Planet + ".mp3");
-                        x.onmousedown = function ()
-                        {
+                        x.onmousedown = function () {
                             audio.play();
                             document.getElementById("planet-icon-skills").style.animation = "spin 0.5s linear infinite";
 
                         };
-                        x.onmouseup = function ()
-                        {
+                        x.onmouseup = function () {
                             audio.pause();
                             document.getElementById("planet-icon-skills").style.animation = "spin 1.4s linear infinite";
 
                         };
                         // END Planet Sound
-                       
+
                         /*document.getElementById("testa").css('width', document.getElementById("testa").attr('aria-valuenow')+'44%');*/
                         /*document.getElementById("screen").style.animation='blinker 1.1s linear 1';
                         //document.getElementById("example4").innerHTML='THANK YOU';
@@ -704,7 +747,7 @@
                         document.getElementById("glow").className += ' shake-hard shake-constant';
                         document.getElementById("glow").style.animationPlayState = newState;
                         document.getElementById("chat").innerHTML = 'STOP IT !';
-                        
+
                         //document.getElementById("example4").innerHTML='THANK YOU';
                         //document.getElementById("face-panel").style.animationPlayState='paused';
                         $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () { document.getElementById("chat").innerHTML = 'Thank You ♥ '; });
@@ -868,7 +911,7 @@
     </section>
     <!-- End Works Section -->
     <!-- Facts Section -->
-    <section id="facts" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+    <section id="facts" ondragover="allowDrop(event)" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
 
         <!--<canvas id="electric" class="she">
@@ -876,14 +919,14 @@
     <canvas id="electric" class="he">
     </canvas>-->
 
-        <canvas id="electric"   height="200"></canvas>
+        <canvas id="electric" height="200"></canvas>
         <!--<canvas id="electric2" height="200"></canvas>-->
-        <div id="planet-icon-love"
-             onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
-        </div>
-        <!--<div id="planet-icon-love" 
-             onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
-        </div>-->
+        <!--<div id="planet-icon-love"
+         onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
+    </div>-->
+        <!--<div id="planet-icon-love"
+         onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
+    </div>-->
         <div id="love">
             <script>
                 function PlayStatelove(newState) {
@@ -894,23 +937,12 @@
                     document.getElementById("astronaut").className += ' shake-hard shake-constant';
                     document.getElementById("astronaut").style.animationPlayState = newState;
 
-
                     document.getElementById("astrowoman").className += ' astronaut'
-
                     document.getElementById("chat").innerHTML = 'I love you...';
-
-                   
-
-
-
                     //document.getElementById("example4").innerHTML='THANK YOU';
-
                     //document.getElementById("face-panel").style.animationPlayState='paused';
-
                     $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
                         document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
-                        
-
                     });
                 }
             </script>
@@ -918,12 +950,20 @@
         </div>
 
         <!-- AstroWoman -->
-        <div id="astrowoman" class="astrowoman">
+
+        <div class="astro-wrap-shela" id="astro-wrap-shela" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="dropcord" ondragover="allowDrop(event)"></div>
+            <a class="astronaut-real-shela " href="#" title="return to base" ></a>
+        </div>
+
+        <div style="display:none;" id="astrowoman" class="astrowoman" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="dropcord" ondragover="allowDrop(event)"></div>
             <div class="headwoman">
                 <div class="glass">
                     <div class="reflect"></div>
                 </div>
             </div>
+
             <div class="neck"></div>
             <div class="chest" style="background: pink;">
                 <div class="face-panel" id="screenwn" style="width:100px;height:80px;">
@@ -937,6 +977,7 @@
             </div>
 
             <div class="back"></div>
+
             <div class="arm left">
                 <div class="top-arm" style="background: pink;"></div>
                 <div class="bottom-arm" style="background: pink;"></div>
@@ -1009,6 +1050,7 @@
                 </div>
             </div>
         </div>
+
         <!-- End AstroWoman -->
     </section>
     <!-- End Facts Section -->
@@ -1107,7 +1149,7 @@
 
                                     <h1 style="text-align:center;">#5</h1>
                                     <blockquote>in 2015 my friend needed to pass the java exam so bad, he begged me to pass the exam in his place, i went to his university enter the class sit down and pass a perfect exam and went out, when i reached the door i realized that i wrote my name instead of his in the exam paper  </blockquote>
-                                    
+
                                 </div>
                                 <!-- Related demos -->
                             </div><!-- /content -->
@@ -1146,7 +1188,7 @@
                                         Yours sincerely, <br>
                                         <strong>Mohamed Hajjej</strong>
                                     </p>
-                                    
+
                                 </div>
                                 <!-- Related demos -->
 
@@ -1226,8 +1268,8 @@
                 <div class="col-md-6">
                     <div class="contact-form">
                         <strong>Send me a message</strong>
-                        
-                    <form name="contact-form" id="contactForm" action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8">
+
+                        <form name="contact-form" id="contactForm" action="https://www.elformo.com/forms/5edb250b-ddcf-4c71-b567-a5dcecb5b034" method="post" accept-charset="UTF-8">
 
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -1238,7 +1280,7 @@
                                 <label for="message">Message</label>
                                 <textarea name="coment" class="form-control" id="comment" rows="5" required=""></textarea>
                             </div>
-                            <input id="submit" name="submit" type="Submit" value="Send"class="btn btn-primary"/>
+                            <input id="submit" name="submit" type="Submit" value="Send" class="btn btn-primary" />
                         </form>
                     </div><!-- /.contact-form -->
                 </div><!-- /.col-md-6 -->
@@ -1276,7 +1318,7 @@
     <!-- End Contact Section -->
 
     <div id="myModal" class="modal">
-       <div class="modal-content">
+        <div class="modal-content">
             <span class="close">&times;</span>
             <p id="modal-content">Some text in the Modal..</p>
         </div>
@@ -1293,9 +1335,6 @@
             </div>
         </div>
     </div>-->
-
-
-
     <!-- Footer Section -->
     <footer class="footer-wrapper">
         <div class="container">

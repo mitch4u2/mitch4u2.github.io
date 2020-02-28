@@ -41,7 +41,9 @@
 
 
 
-        .cs-text span blackhole {
+        .cs-text span 
+        
+        {
             background: url(../img/black-icon.png) no-repeat center center;
             background-size: cover;
         }
@@ -343,6 +345,35 @@
 
         .cs-text span:last-child {
             cursor: pointer;
+            position: fixed;
+            top: 60px;
+            margin-top: 5%;
+            left: 33%;
+            z-index: 100;
+            width: 600px;
+            height: 600px;
+            background: url(../img/spaceship3.png) no-repeat center center;
+            /*filter: hue-rotate(180deg);*/
+            /*filter: saturate(70);*/
+            /*filter: invert(100%);*/
+            /*filter: grayscale(100%);*/
+            /*filter: drop-shadow(8px 8px 10px #f1c40f);*/
+            background-size: contain;
+            -webkit-animation: spin 20.4s linear infinite;
+            -moz-animation: spin 20.4s linear infinite;
+            animation: spin 40.4s linear infinite;
+            /**/
+            /*transform: rotate(-10deg);*/
+            /*-webkit-animation: turn 20s infinite;
+            animation: turn 20s infinite;*/
+            /*margin-top: -480px;
+            width: 10%;
+            height: 100%;
+            margin-left: 1000px;*/
+            /*animation-direction: reverse;*/
+        }
+        /*.cs-text span:last-child {
+            cursor: pointer;
             position: absolute;
             top: -20%;
             left: 43%;
@@ -353,8 +384,8 @@
             background-size: cover;
             -webkit-animation: spin 1.4s linear infinite;
             -moz-animation: spin 1.4s linear infinite;
-            animation: spin 1.4s linear infinite;
-        }
+            animation: spin 1.2s linear infinite;
+        }*/
 
 
 

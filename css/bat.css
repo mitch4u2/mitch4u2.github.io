@@ -3,143 +3,162 @@
 @import url(http://fonts.googleapis.com/css?family=Orbitron);
 
 @font-face {
-  font-family: 'haymakerregular';
-  /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot");*/
-  /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.svg#haymakerregular") format("svg");*/
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'haymakerregular';
+    /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot");*/
+    /*src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/haymaker/haymaker-webfont.svg#haymakerregular") format("svg");*/
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'mission_scriptregular';
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.eot");
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.woff") format("woff"), url("../fonts/mission/mission-script-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.svg#mission_scriptregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'mission_scriptregular';
+    src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.eot");
+    src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.woff") format("woff"), url("../fonts/mission/mission-script-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/mission/mission-script-webfont.svg#mission_scriptregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: 'klinic_slablight';
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.eot");
-  src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.svg#klinic_slablight") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'klinic_slablight';
+    src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.eot");
+    src: url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.eot?#iefix") format("embedded-opentype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.ttf") format("truetype"), url("https://dl.dropboxusercontent.com/u/6152966/fonts/klinics/klinicslablight-webfont.svg#klinic_slablight") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 h1 span.rock {
-  font-family: "haymakerregular", Helvetica, Arial, sans-serif;
-  font-size: 36px;
-  font-size: 3.6rem;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-size: 3.6rem;
 }
+
 h1 span.paper {
-  font-family: "mission_scriptregular", Georgia, Times, "Times New Roman", serif;
-  font-size: 48px;
-  font-size: 4.8rem;
+    font-family: "mission_scriptregular", Georgia, Times, "Times New Roman", serif;
+    font-size: 48px;
+    font-size: 4.8rem;
 }
+
 h1 span.scissors {
-  font-family: "klinic_slablight", Georgia, Times, "Times New Roman", serif;
-  font-size: 48px;
-  font-size: 4.8rem;
+    font-family: "klinic_slablight", Georgia, Times, "Times New Roman", serif;
+    font-size: 48px;
+    font-size: 4.8rem;
 }
 
 button.play {
-  border-radius: 10px;
-  border: 4px solid white;
+    border-radius: 10px;
+    border: 4px solid white;
 }
-button.play.rock {
-  background: #efefef url("../img/rock.jpg") no-repeat;
-  background-size: cover;
-}
-button.play.paper {
-    background: #efefef url("../img/scissor.png") no-repeat;
-    background-size: cover;
-}   
-button.play.scissors {
-    background: #efefef url("../img/paper.jpg") no-repeat;
-    background-size: cover;
-}
-button.play:hover {
-  border: 4px solid #00aae3;
-}
+
+    button.play.rock {
+        background: #efefef url("../img/rock.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    button.play.paper {
+        background: #efefef url("../img/scissor.png") no-repeat;
+        background-size: cover;
+    }
+
+    button.play.scissors {
+        background: #efefef url("../img/paper.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    button.play:hover {
+        border: 4px solid #00aae3;
+    }
+
 button#reset {
-  color:black;
-  background-color: #00aae3;
-  border-radius: 10px;
+    color: black;
+    background-color: #00aae3;
+    border-radius: 10px;
     font-size: 8px;
-  font-size: 1.3rem;
-  
-  font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
 }
+
 h2#results {
-  color: #00aae3;
-  font-size: 24px;
-  font-size: 2.4rem;
+    color: #00aae3;
+    font-size: 24px;
+    font-size: 2.4rem;
     font-family: "haymakerregular", Helvetica, Arial, sans-serif;
 }
 
 .scorebox {
-  background-color: #efefef;
-  border: 4px solid #efefef;
-  border-radius: 10px;
+    background-color: #efefef;
+    border: 4px solid #efefef;
+    border-radius: 10px;
     font-family: "haymakerregular", Helvetica, Arial, sans-serif;
 }
-.scorebox h2 {
-  color: #777777;
-  font-weight: 600;
-  font-size: 24px;
-  font-size: 2.4rem;
-    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
-}
+
+    .scorebox h2 {
+        color: #777777;
+        font-weight: 600;
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+    }
+
 span#loses,
 span#wins {
-  font-size: 48px;
-  font-size: 4.8rem;
-  color: #00aae3;
-  font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-size: 4.8rem;
+    color: #00aae3;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
 }
+
 .score-divider span {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #00aae3;
-  font-weight: 200;
+    font-size: 40px;
+    font-size: 4rem;
+    color: #00aae3;
+    font-weight: 200;
 }
+
 div.score-num,
 div.score-divider {
-  font-size: 18px;
-  font-size: 1.8rem;
-  color: #777777;
-  font-weight: 600;
-  text-align: center;
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: #777777;
+    font-weight: 600;
+    text-align: center;
 }
+
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
+
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
 .scorebox {
-  box-sizing: border-box;
-  width: 195px;
-  width: 19.5rem;
-  height: 175px;
-  height: 17.5rem;
-  padding: 5px;
-  margin: 0 auto 15px auto;
+    box-sizing: border-box;
+    width: 195px;
+    width: 19.5rem;
+    height: 175px;
+    height: 17.5rem;
+    padding: 5px;
+    margin: 0 auto 15px auto;
 }
-.scorebox h2 {
-  margin: 15px 0 10px 10px;
-}
+
+    .scorebox h2 {
+        margin: 15px 0 10px 10px;
+    }
+
 .score-num,
 .score-divider {
-  float: left;
+    float: left;
 }
+
 .score-num {
-  width: 40%;
+    width: 40%;
 }
+
 .score-divider {
-  width: 20%;
+    width: 20%;
 }
 
 /*button .play {
@@ -154,64 +173,68 @@ body {
 }*/
 
 button #reset {
-  width: 120px;
-  width: 12rem;
-  height: 35px;
-  height: 3.5rem;
-  line-height: 1em;
-  float: right;
-  margin-right: 105px;
-  border: 0;
+    width: 120px;
+    width: 12rem;
+    height: 35px;
+    height: 3.5rem;
+    line-height: 1em;
+    float: right;
+    margin-right: 105px;
+    border: 0;
 }
 
 button.play {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 175px;
-  width: 17.5rem;
-  height: 175px;
-  height: 17.5rem;
-  padding: 5px;
-  margin-right: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 175px;
+    width: 17.5rem;
+    height: 175px;
+    height: 17.5rem;
+    padding: 5px;
+    margin-right: 30px;
 }
+
 button#reset {
-  width: 120px;
-  width: 12rem;
-  height: 35px;
-  height: 3.5rem;
-  line-height: 1em;
-  float: right;
-  margin-right: 105px;
-  border: 0;
+    width: 120px;
+    width: 12rem;
+    height: 35px;
+    height: 3.5rem;
+    line-height: 1em;
+    float: right;
+    margin-right: 105px;
+    border: 0;
 }
+
 .scorebox {
-  box-sizing: border-box;
-  width: 195px;
-  width: 19.5rem;
-  height: 175px;
-  height: 17.5rem;
-  padding: 5px;
-  margin: 0 auto 15px auto;
+    box-sizing: border-box;
+    width: 195px;
+    width: 19.5rem;
+    height: 175px;
+    height: 17.5rem;
+    padding: 5px;
+    margin: 0 auto 15px auto;
 }
-.scorebox h2 {
-  margin: 15px 0 10px 10px;
-}
+
+    .scorebox h2 {
+        margin: 15px 0 10px 10px;
+    }
+
 div.score-num,
 div.score-divider {
-  float: left;
+    float: left;
 }
+
 div.score-num {
-  width: 40%;
+    width: 40%;
 }
+
 div.score-divider {
-  width: 20%;
+    width: 20%;
 }
 
 
-#watchMe:hover{
-      cursor: url('../img/rsz_skip1.png'),auto;
-        
-  
+#watchMe:hover {
+    cursor: url('../img/rsz_skip1.png'),auto;
 }
 
 
@@ -231,33 +254,28 @@ div.score-divider {
 
 /* Modal Content */
 .modal-content {
-    background: url(../img/modal.jpg) no-repeat ;
+    background: url(../img/modal.jpg) no-repeat;
     background-size: cover;
     margin-top: -100px;
     margin-left: 30%;
     border: 1px solid #888;
     width: 450px;
     height: 350px;
-    
     font-family: fantasy;
-  
-  
-}
-.modal-content p{
-    
-    font-size: 28px;
-    font-weight: bolder;
-    color: BLACK;
-     text-align: center;
-
-    
 }
 
+    .modal-content p {
+        font-size: 28px;
+        font-weight: bolder;
+        color: BLACK;
+        text-align: center;
+    }
 
 
 
 
-.modal1, .modal2, .modal3, .modal4{
+
+.modal1, .modal2, .modal3, .modal4 {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 999999999999999999; /* Sit on top */
@@ -289,24 +307,22 @@ div.score-divider {
     color: white;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 
 
-#planet{
+#planet {
     margin-top: -132px;
     margin-bottom: -120px;
     margin-left: 83%;
 }
 
-#love{
+#love {
     height: 500px;
-  
-        
 }
 
 
@@ -323,11 +339,10 @@ table {
 }
 
 
-td:hover{
+td:hover {
     background-color: black;
-   opacity: 0.5;
+    opacity: 0.5;
     cursor: pointer;
-   
 }
 
 
@@ -341,7 +356,6 @@ td:hover{
     height: 120px;
     /*left: 45%;*/
     /*top: 201px;*/
-    
     background: url(../img/Blackhole.ico) no-repeat center center;
     background-size: contain;
     -webkit-animation: spin 1.4s linear infinite;
@@ -366,72 +380,66 @@ td:hover{
     animation: spin 1.4s linear infinite;
 }
 
-#planet-icon:active{
-    
-    -webkit-animation:spin 0.4s linear infinite;
-    -moz-animation:spin 0.4s linear infinite;
-    animation:spin 0.4s linear infinite;
-    
+#planet-icon:active {
+    -webkit-animation: spin 0.4s linear infinite;
+    -moz-animation: spin 0.4s linear infinite;
+    animation: spin 0.4s linear infinite;
 }
 
 
-#planet-icon1{
-    
+#planet-icon1 {
     cursor: pointer;
-	position: absolute;
+    position: absolute;
     left: 50%;
-    
-	z-index: 100;
+    z-index: 100;
     width: 120px;
     height: 120px;
-    
-	background: url(../img/foursites.jpeg) no-repeat center center;
-    background-size:contain;
-     -webkit-animation:spin 1.4s linear infinite;
-    -moz-animation:spin 1.4s linear infinite;
-    animation:spin 1.4s linear infinite;
-}
-#planet-icon1:active{
-    
-    -webkit-animation:spin 0.4s linear infinite;
-    -moz-animation:spin 0.4s linear infinite;
-    animation:spin 0.4s linear infinite;
-    
+    background: url(../img/foursites.jpeg) no-repeat center center;
+    background-size: contain;
+    -webkit-animation: spin 1.4s linear infinite;
+    -moz-animation: spin 1.4s linear infinite;
+    animation: spin 1.4s linear infinite;
 }
 
+    #planet-icon1:active {
+        -webkit-animation: spin 0.4s linear infinite;
+        -moz-animation: spin 0.4s linear infinite;
+        animation: spin 0.4s linear infinite;
+    }
 
 
-.glow{
+
+.glow {
     font-family: 'Orbitron', courier, sans-serif;
-    font-size:5em;
-    text-align:center;
-    color:rgba(155, 182, 255, 0.22); 
+    font-size: 5em;
+    text-align: center;
+    color: rgba(155, 182, 255, 0.22);
     text-shadow: 0 0 1px rgba(157,208,154,.3);
     position: absolute;
     left: 42%;
     top: 0;
-    /*margin-top:-20px;*/   
+    /*margin-top:-20px;*/
 }
 
-.glow2{
-    font-size:1.9em;
-    text-align:center;
+.glow2 {
+    font-size: 1.9em;
+    text-align: center;
     font-family: 'haymakerregular';
     position: absolute;
     left: 25%;
-    margin-top:20px;
+    margin-top: 20px;
     width: 600px;
     color: #fff;
     text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
     text-decoration: none;
-	outline: 0 none;
-   /* transform:scaleY(2);*/
+    outline: 0 none;
+    /* transform:scaleY(2);*/
 }
 
-#skillrow{
+#skillrow {
     position: absolute;
     bottom: 0;
-    /*margin-top: -80px;*/  
+    /*margin-top: -80px;*/
 }
 
 
@@ -448,37 +456,39 @@ $moon-color: #9E9E9E;
 
 // Orbit Function
 @function orbit() {
-  @return $animation $gravitation-constant * $t + s linear infinite;
+    @return $animation $gravitation-constant * $t + s linear infinite;
 }
 
 
 
 // Use Flexbox To Center Content
 .galaxy {
-  display: flex;
-  justify-content: center;
-  margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
 }
 
 // Create Our Orbit
 .orbit {
-  width: 300px;
-  height: 300px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  position: absolute;
-  border-radius: 100%;
-  margin: -50px auto;
-  animation: orbit();
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    position: absolute;
+    border-radius: 100%;
+    margin: -50px auto;
+    animation: orbit();
 }
 
 // Planet Styles
 .planetcos {
-  background: $planet-color;
-  box-shadow: inset -30px -30px 0px darken($planet-color, 2%);
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  &:before {
+    background: $planet-color;
+    box-shadow: inset -30px -30px 0px darken($planet-color, 2%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    &:before
+
+{
     content: '';
     background: darken($planet-color, 5%);
     border-radius: 100%;
@@ -486,8 +496,9 @@ $moon-color: #9E9E9E;
     height: 20px;
     display: block;
     margin: 50px 100px;
-  }
-  &:after {
+}
+
+&:after {
     content: '';
     background: darken($planet-color, 4%);
     border-radius: 100%;
@@ -495,18 +506,21 @@ $moon-color: #9E9E9E;
     height: 50px;
     display: block;
     margin: -20px 40px;
-  }
+}
+
 }
 
 // Moon Styles
 .moon {
-  background: $moon-color;
-  box-shadow: inset -7px -7px 0 darken($moon-color, 7%);
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  margin: 20px;
-  &:before {
+    background: $moon-color;
+    box-shadow: inset -7px -7px 0 darken($moon-color, 7%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 20px;
+    &:before
+
+{
     content: '';
     background: darken($moon-color, 4%);
     border-radius: 100%;
@@ -514,8 +528,9 @@ $moon-color: #9E9E9E;
     height: 9px;
     display: inline-block;
     margin: 10px 10px;
-  }
-  &:after {
+}
+
+&:after {
     content: '';
     background: darken($moon-color, 4%);
     border-radius: 100%;
@@ -523,7 +538,8 @@ $moon-color: #9E9E9E;
     height: 9px;
     display: block;
     margin: -7px 20px;
-  }
+}
+
 }
 
 /*// Animations
@@ -549,9 +565,9 @@ $moon-color: #9E9E9E;
 
 
 
- video#watchMe {
+video#watchMe {
     z-index: 9999;
-    position:relative;
+    position: relative;
 }
 
 #overlay {
@@ -559,39 +575,36 @@ $moon-color: #9E9E9E;
     position: absolute;
     height: 100%;
     width: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: rgba(0, 0, 0, 0.92);
 }
- 
+
 .prompt {
     position: absolute;
     top: 5px;
     right: 5px;
-    width: 300px;
+    width: 30%;
     opacity: 0.5;
-  background-color: black;
-  color: #55ff55;
-  font-family: monospace;
-  font-size:23px;
-   
-  border: 4px double green;
-    
-    
-}
-.output {
-display:none;
-}
-.active:after {
-  content: '_';
+    background-color: black;
+    color: #55ff55;
+    font-family: monospace;
+    font-size: 23px;
+    border: 4px double green;
 }
 
+.output {
+    display: none;
+}
+
+.active:after {
+    content: '_';
+}
 
 #electric {
     /*position: absolute;
     width: 400px;
     margin-top: 70px;*/
-    
     /*transform: rotate(180deg) scaleX(1);
     transform: rotate(180deg) scaleX(-1);*/
     position: absolute;
@@ -611,12 +624,23 @@ display:none;
     margin-top: -100px;
 }*/
 
-
-
-
-
-
-
-
-
-
+#dropcord {
+    /*position: absolute;
+    width: 100%;
+    height: 100%;*/
+    /*padding: 10px;*/
+    border: 3px solid #aaaaaa;
+    /*z-index:10;*/
+    /*transform: rotate(90deg) scaleX(0);*/
+    position: absolute;
+    /*right: 10%;*/
+    /*margin-top: -200px;*/
+    /*margin-left: 142%;*/
+    right: 0px;
+    top: -200px;
+    margin-top: -100px;
+    /*margin-right: 1000px;*/
+    width: 100%;
+    height: 100%;
+    /*transform: translate(-50%, -50%) rotate(-90deg) scale(1.2);*/
+}
