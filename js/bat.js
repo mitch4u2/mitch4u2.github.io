@@ -161,12 +161,12 @@ window.onclick = function(event) {
 $(window).scroll(function () {
 
 
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
     if ($(window).scrollTop() > 700) {
         document.getElementById('blackhole').style.display = 'none';
-        document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
-        document.getElementById('astrocord').style.left = '-185px';
-        document.getElementById('astrocord').style.top = '-21%';
+        //document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
+        //document.getElementById('astrocord').style.left = '-185px';
+        //document.getElementById('astrocord').style.top = '-21%';
         // left: -165px;
         // top: -21 %;
         // transform: rotate(90deg)//;
@@ -177,9 +177,9 @@ $(window).scroll(function () {
         //document.getElementById('astrocord').style.left = '';
         //document.getElementById('astrocord').style.top = '';
 
-        document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
-        document.getElementById('astrocord').style.left = '-185px';
-        document.getElementById('astrocord').style.top = '-21%';
+        //document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
+        //document.getElementById('astrocord').style.left = '-185px';
+        //document.getElementById('astrocord').style.top = '-21%';
         
     }
     if ($(window).scrollTop() > 5000)
@@ -392,3 +392,99 @@ function animate() {
 
 // drawVisor();
 animate();
+
+
+
+// Astronaut gas air pressure
+
+var smoke = new Image();
+smoke.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15388/smoke.png';
+
+$.fn.emitter = function (opts) {
+    var particles = [];
+    var canvases = [];
+
+    var particle = function (canvas) {
+        var x, y, size, speedX, speedY, opacity;
+        reset();
+
+        this.update = function () {
+            if (opacity > 0) {
+                opacity -= (Math.random() / opts.speed.fade);
+            }
+
+            if (opacity <= 0) {
+                reset();
+            }
+
+            speedX -= Math.random() / opts.speed.acceleration;
+            speedY -= Math.random() / opts.speed.acceleration;
+            x += speedX;
+            y += speedY;
+            size += Math.random();
+            drawParticle(x, y, size, opacity);
+        };
+
+        function drawParticle(x, y, size, opacity) {
+            canvas.globalAlpha = opacity;
+            canvas.drawImage(smoke, 0, 0, opts.size, opts.size, x, y, size, size);
+        }
+
+        function reset() {
+            x = opts.x;
+            y = opts.y;
+            size = opts.size;
+            speedX = Math.random() * opts.speed.x;
+            speedY = Math.random() * opts.speed.y;
+            opacity = Math.random();
+        }
+    };
+
+    var canvas = function (el) {
+        var canvas = el[0].getContext('2d');
+
+        canvas.width = el.width();
+        canvas.height = el.height();
+
+        for (var c = 0; c < opts.particles; c++) {
+            particles.push(new particle(canvas));
+        }
+
+        this.clear = function () {
+            canvas.clearRect(0, 0, canvas.width, canvas.height);
+        };
+    };
+
+    $(this).each(function () {
+        canvases.push(new canvas($(this)));
+    });
+
+    function render() {
+        canvases.forEach(function (canvas) {
+            canvas.clear();
+        });
+
+        particles.forEach(function (particle) {
+            particle.update();
+        });
+
+        window.requestAnimationFrame(render);
+    }
+
+    return {
+        render: render
+    }
+};
+//$('canvas').emitter({
+$("#airpressure").emitter({
+    x: 100,
+    y: 100,
+    size: 140,
+    particles: 40,
+    speed: {
+        x: 4,
+        y: 5,
+        fade: 10,
+        acceleration: 5200
+    }
+}).render();

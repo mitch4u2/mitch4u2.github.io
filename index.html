@@ -46,31 +46,35 @@
 <body>
     <!-- Home Section -->
     <section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
-        <!--   <video width="120%" height="120%" style="margin-left:-100px;margin-top:-50px;"id="watchMe" autoplay="true">
-            <source src="gravity.mp4" type="video/mp4"></source>
-        </video> -->
-        <!-- <div id="overlay"></div> -->
+        <video id="watchMe" controls autoplay muted loop>
+            <source src="gravity.mp4" type="video/mp4" />
+        </video>
+        <div id="overlay"></div>
 
         <script>
+
             $(document).ready(function () {
-                terminal();
+                document.documentElement.style.overflow = 'hidden';
+                var video = document.getElementById('watchMe');
+                var overlay = document.getElementById('overlay');
+                
+                video.volume = 0.2;
+                video.onclick = function () {
+                    overlay.style.display = 'none';
+                    video.style.display = 'none';
+                    document.documentElement.style.overflowY = 'scroll';
+                    terminal();
+                };
+
+                video.addEventListener('ended', function () {
+                    overlay.style.display = 'none';
+                    video.style.display = 'none';
+                    document.documentElement.style.overflowY = 'scroll';
+                    terminal();
+                }, false);
             });
-            //  var video = document.getElementById('watchMe');
-            //  var overlay = document.getElementById('overlay');
 
-            //  //inst.style.display='none';
-            //  //document.body.style.overflow = 'hidden';
-            //   video.volume=0.2;
-            //   video.onclick = function (){
-            //      video.currentTime = 300;
-            //  };
 
-            // video.addEventListener('ended', function(){
-            //         overlay.style.display='none';
-            // 		video.style.display = 'none';
-
-            //document.body.style.overflow = 'scroll';
-            // }, false);
 
         </script>
 
@@ -81,21 +85,10 @@
                 <p>Click & Hold the planet </p>
                 <p>Good Luck</p>
             </main>
+
             <canvas id="demo-canvas"></canvas>
             <section class="main"
-                     style="position: absolute;
-                            left: 50%;
-                            margin-left: -302px;
-                            top: 50%; ">
-                <!--<section class="main" style="text-align: center;margin: auto; position:absolute;"-->
-                <!--
-        position: absolute;
-            left: 50%;
-            margin-left: -302px;
-                top: 50%;
-            margin-top: 180px;
-             -->
-
+                     style="position: absolute; left: 50%; margin-left: -302px; top: 50%; ">
                 <h2 class="cs-text">
                     <span></span>
                     <span></span>
@@ -157,30 +150,41 @@
                     ev.preventDefault();
                     var data = ev.dataTransfer.getData("text");
                     ev.target.appendChild(document.getElementById(data));
+
+
+                    // document.getElementById("airpressure").style.top = "30%";
+
+                    document.getElementById("airpressure").style.left = '1000px';
+                    // top:30%;
+                    // left:0px;
+                    
                     //console.log("DROP");
-                    document.getElementById("batterywn").style.animationPlayState = "running";
-                    document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
-                    document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
-                    document.getElementById("battery").style.animation = 'mymove2 1s';
+                    // document.getElementById("batterywn").style.animationPlayState = "running";
+                    // document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
+                    // document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
+                    // document.getElementById("battery").style.animation = 'mymove2 1s';
                     // document.getElementById("armleft").style.animation = 'armByeRight 1.1s linear infinite';
                     // document.getElementById("astronaut").className += ' shake-hard shake-constant';
                     // document.getElementById("astronaut").style.animation = "armByeRight";
 
-                    document.getElementById("astro-wrap-shela").style.transform = 'rotate(-64deg)';
-                    document.getElementById("astro-wrap-shela").style.right = '20%';
-                    document.getElementById("astro-wrap-shela").style.marginTop = '-42%';
+                    // document.getElementById("astro-wrap-shela").style.transform = 'rotate(-64deg)';
+                    // document.getElementById("astro-wrap-shela").style.right = '20%';
+                    // document.getElementById("astro-wrap-shela").style.marginTop = '-42%';
 
-                    document.getElementById("astrocord").style.marginLeft = '-400px';
+                    // document.getElementById("astrocord").style.marginLeft = '-400px';
+
+
                     // document.getElementById('astrocord').style.top = '-21%';
                     // document.getElementById("astrocord").style.top = '-21%';
                     // document.getElementById("astrowoman").className += ' astronaut';
-                    document.getElementById("chat").innerHTML = 'I love you...';
-                    $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
-                        document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
-                    });
+                    //document.getElementById("chat").innerHTML = 'I love you...';
+                    //$("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
+                    //    document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
+                    //});
 
                 }
             </script>
+            <h1 class="msg">..shhh.. ..houston... ..404... ..shhhh... ..lost.. ..in.. ..space. .shhhhh...</h1>
 
             <div id="astrocord" class="astronaut__cord">
                 <canvas id="cord" height="600" width="500" draggable="true" ondragstart="drag(event)"></canvas>
@@ -189,6 +193,9 @@
             <div class="astro-wrap">
                 <a class="astronaut-real" href="#" title="return to base"></a>
             </div>
+            <canvas id="airpressure" class="airpressure" width="1000" height="1000"></canvas>
+            
+
 
             <div id="astronaut" class="astronaut" style="display:none;">
 
@@ -387,11 +394,11 @@
         <div class="main">
             <div class="container">
                 <section class="content">
-                    <!--</br></br></br>-->
-                    <button class="play rock" type="button" onclick="play('rock')"></button>
-                    <button class="play paper" type="button" onclick="play('scissors')"></button>
+                    <br /><br /><br />
+                    <button class="play rock" type="button" onclick="play('rock')"></button><br />
+                    <button class="play paper" type="button" onclick="play('scissors')"></button><br />
                     <button class="play scissors" type="button" onclick="play('paper')"></button><br />
-                    <div style="clear:both;"></div></ br>
+                    <div style="clear:both;"></div><br />
                     <span id="player"></span> <span id="opponent"></span> <br />
                     <h2 id="results">ROCK  SCISSOR  PAPER</h2>
                 </section>
@@ -404,6 +411,7 @@
                     </div>
 
                 </aside>
+                <h1 class="msg">..shhh.. ..Do you want to Play?. .shhhhh...</h1>
             </div>
         </div>
         <!--/.overlay-->
@@ -915,18 +923,18 @@
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
 
         <!--<canvas id="electric" class="she">
-    </canvas>
-    <canvas id="electric" class="he">
-    </canvas>-->
+        </canvas>
+        <canvas id="electric" class="he">
+        </canvas>-->
 
         <canvas id="electric" height="200"></canvas>
         <!--<canvas id="electric2" height="200"></canvas>-->
         <!--<div id="planet-icon-love"
-         onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
-    </div>-->
+             onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
+        </div>-->
         <!--<div id="planet-icon-love"
-         onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
-    </div>-->
+             onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
+        </div>-->
         <div id="love">
             <script>
                 function PlayStatelove(newState) {
@@ -953,7 +961,7 @@
 
         <div class="astro-wrap-shela" id="astro-wrap-shela" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div id="dropcord" ondragover="allowDrop(event)"></div>
-            <a class="astronaut-real-shela " href="#" title="return to base" ></a>
+            <a class="astronaut-real-shela " href="#" title="return to base"></a>
         </div>
 
         <div style="display:none;" id="astrowoman" class="astrowoman" ondrop="drop(event)" ondragover="allowDrop(event)">
