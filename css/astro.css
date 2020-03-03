@@ -787,12 +787,31 @@ Reflect : #18426b;
 }
 
 .astro-wrap {
-    position: absolute;    
+    position: absolute;
     width: 265px;
     height: 430px;
     /*margin: 0 auto;*/
-    left:0px;
+    left: 0px;
+    /*ZOOM OUT*/
+    /*transition-property: transform;
+    transition-duration: 2s;
+    animation-play-state:paused;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;*/
+}
+@keyframes grow {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
 
+    to {
+        transform: scale(0);
+        display:none;
+        opacity:0.2;
+    }
 }
 .astro-wrap-shela {
     display:none;
@@ -812,10 +831,19 @@ Reflect : #18426b;
     position: fixed;
     top: 20%;
     left: 0;
-    -webkit-transform: translate(0, 50px);
+    /*-webkit-transform: translate(0, 50px);
     transform: translate(0, 50px);
     -webkit-animation: move 10s infinite;
-    animation: move 10s infinite;
+    animation: move 10s infinite;*/
+    /*ZOOM OUT*/
+    transition-property: transform;
+    transition-duration: 2s;
+    animation-play-state:paused;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
 }
 
 .astronaut-real-shela {
