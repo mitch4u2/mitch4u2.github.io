@@ -46,6 +46,8 @@
 <body>
     <!-- Home Section -->
     <section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+        
+        <!-- ++++++ Video Section +++++++ -->
         <video id="watchMe" controls autoplay muted loop>
             <source src="gravity.mp4" type="video/mp4" />
         </video>
@@ -54,10 +56,15 @@
         <script>
 
             $(document).ready(function () {
+
+                
+
                 document.documentElement.style.overflow = 'hidden';
                 var video = document.getElementById('watchMe');
                 var overlay = document.getElementById('overlay');
-                
+                document.documentElement.style.overflowY = 'scroll';
+
+
                 video.volume = 0.2;
                 video.onclick = function () {
                     overlay.style.display = 'none';
@@ -137,27 +144,47 @@
                 //DRAG DROP
                 function allowDrop(ev) {
                     ev.preventDefault();
-                    //console.log("Allow Drop");
                 }
 
                 function drag(ev) {
                     ev.dataTransfer.setData("text", ev.target.id);
-                    //console.log(ev.target.id);
-
                 }
 
                 function drop(ev) {
                     ev.preventDefault();
+                    // ev.dataTransfer.dropEffect = "link";
+
                     var data = ev.dataTransfer.getData("text");
                     ev.target.appendChild(document.getElementById(data));
-
-
                     // document.getElementById("airpressure").style.top = "30%";
-
-                    document.getElementById("airpressure").style.left = '1000px';
-                    // top:30%;
-                    // left:0px;
+                    document.getElementById("airpressure").style.left = '72%';
+                    document.getElementById("airpressure").style.position = 'fixed';
+                    document.getElementById("droppoint").style.zIndex = '1';
+                    document.getElementById("droppoint").style.position = 'fixed';
+                    document.getElementById("droppoint").style.top = '-23%';
+                    document.getElementById("droppoint").style.marginTop = '0%';
+                    // document.getElementById("astro-wrap").style.transition = 'opacity 1.2s linear';
                     
+                    // transition: transform .2s;
+
+                    // transform: scale(1.5);
+                    
+
+                        // cord
+                        // margin-top: -353%;
+                        // transform: rotate(189deg);
+                        // margin-left: -77%;
+                        // real she
+                        // z-index: 2;
+
+                    // document.getElementById("astrocord").style.zIndex = '10';
+                    
+                    // document.getElementById("astro-wrap-shela").style.zIndex = '999999';
+                    //console.log()
+                    
+                    // document.getElementById("dropcord").style.position = 'fixed';
+                    //document.getElementById("cord").style.position = 'fixed';
+                     
                     //console.log("DROP");
                     // document.getElementById("batterywn").style.animationPlayState = "running";
                     // document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
@@ -171,7 +198,6 @@
                     // document.getElementById("astro-wrap-shela").style.right = '20%';
                     // document.getElementById("astro-wrap-shela").style.marginTop = '-42%';
 
-                    // document.getElementById("astrocord").style.marginLeft = '-400px';
 
 
                     // document.getElementById('astrocord').style.top = '-21%';
@@ -186,14 +212,16 @@
             </script>
             <h1 class="msg">..shhh.. ..houston... ..404... ..shhhh... ..lost.. ..in.. ..space. .shhhhh...</h1>
 
-            <div id="astrocord" class="astronaut__cord">
-                <canvas id="cord" height="600" width="500" draggable="true" ondragstart="drag(event)"></canvas>
+            <div id="dragonball" >
+                <div id="astrocord" class="astronaut__cord">
+                    <canvas id="cord" height="600" width="500" draggable="true" ondragstart="drag(event)"></canvas>
+                </div>
             </div>
+            <canvas id="airpressure" class="airpressure" width="1000" height="1000" ondragstart="drag(event)"></canvas>
 
-            <div class="astro-wrap">
+            <div id="astro-wrap" class="astro-wrap">
                 <a class="astronaut-real" href="#" title="return to base"></a>
             </div>
-            <canvas id="airpressure" class="airpressure" width="1000" height="1000"></canvas>
             
 
 
@@ -923,18 +951,18 @@
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
 
         <!--<canvas id="electric" class="she">
-        </canvas>
-        <canvas id="electric" class="he">
-        </canvas>-->
+    </canvas>
+    <canvas id="electric" class="he">
+    </canvas>-->
 
         <canvas id="electric" height="200"></canvas>
         <!--<canvas id="electric2" height="200"></canvas>-->
         <!--<div id="planet-icon-love"
-             onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
-        </div>-->
+         onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
+    </div>-->
         <!--<div id="planet-icon-love"
-             onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
-        </div>-->
+         onmouseup="PlayStatelove('paused');console.log('Before');document.getElementById('electric2').style.display = 'none';console.log('Middle');document.getElementById('electric').style.display = 'none';console.log('After');" onmousedown="PlayStatelove('running');document.getElementById('electric2').style.display = '';">
+    </div>-->
         <div id="love">
             <script>
                 function PlayStatelove(newState) {
@@ -958,14 +986,15 @@
         </div>
 
         <!-- AstroWoman -->
-
-        <div class="astro-wrap-shela" id="astro-wrap-shela" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div id="dropcord" ondragover="allowDrop(event)"></div>
-            <a class="astronaut-real-shela " href="#" title="return to base"></a>
+        <div id="dropcord" >
+            <div class="astro-wrap-shela" id="astro-wrap-shela">
+                <a id="astronaut-real-shela" class="astronaut-real-shela" href="#" title="return to base"></a>
+            </div>
+            <div id="droppoint" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
         </div>
 
-        <div style="display:none;" id="astrowoman" class="astrowoman" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div id="dropcord" ondragover="allowDrop(event)"></div>
+        <div style="display:none;" id="astrowoman" class="astrowoman">
+            <!--<div id="dropcord" ondragover="allowDrop(event)"></div>-->
             <div class="headwoman">
                 <div class="glass">
                     <div class="reflect"></div>

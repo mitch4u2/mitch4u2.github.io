@@ -185,9 +185,23 @@ $(window).scroll(function () {
     if ($(window).scrollTop() > 5000)
     {
         document.getElementById('astro-wrap-shela').style.display = 'block';// should be block
+        document.getElementById('dropcord').style.display = 'block';
+        document.getElementById('airpressure').style.display = 'block';
+       
     }
     else {
         document.getElementById('astro-wrap-shela').style.display = 'none';
+        document.getElementById('dropcord').style.display = 'none';
+        console.log(document.getElementById('airpressure').style.left);
+        if (document.getElementById('airpressure').style.left == "72%") {
+            document.getElementById('airpressure').style.display = 'none';
+        }
+        //if (document.getElementById('airpressure').style.left > "50%") {
+        //    consol.log("Hello Mo");
+        //    // document.getElementById('airpressure').style.display = 'none';
+        //}
+        // document.getElementById('airpressure').style.display = 'none';
+
     }
 
     //if ($(window).scrollTop() + $(window).height() < $(document).height() - 100) {

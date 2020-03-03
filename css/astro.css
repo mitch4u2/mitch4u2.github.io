@@ -508,8 +508,9 @@ Reflect : #18426b;
     transform:rotate(190deg);
     /*transform: translate(-50%, -50%) rotate(-90deg) scale(1.2);*/
 }
-
-
+#cord{
+    z-index:-1;
+}
 /*	Media queries 	*/
 @media screen and (min-width:931px) {
     .curves .curve3 {
@@ -794,6 +795,7 @@ Reflect : #18426b;
 
 }
 .astro-wrap-shela {
+    display:none;
     position: absolute;
     width: 265px;
     height: 430px;
@@ -1008,6 +1010,6 @@ Reflect : #18426b;
     width: 100%;
     position:fixed;
     top:30%;
-    left:0px;
+    left:2%;
     z-index:-1;
 }
