@@ -801,6 +801,7 @@ Reflect : #18426b;
     animation-iteration-count: infinite;
     animation-timing-function: linear;*/
 }
+/*Animation on detach*/
 @keyframes grow {
     from {
         transform: scale(1);
@@ -809,8 +810,8 @@ Reflect : #18426b;
 
     to {
         transform: scale(0);
-        display:none;
-        opacity:0.2;
+        /*display:none;*/
+        opacity:0.5;
     }
 }
 .astro-wrap-shela {
@@ -835,15 +836,20 @@ Reflect : #18426b;
     transform: translate(0, 50px);
     -webkit-animation: move 10s infinite;
     animation: move 10s infinite;*/
-    /*ZOOM OUT*/
+    /*Move*/
     transition-property: transform;
     transition-duration: 2s;
-    animation-play-state:paused;
-    animation-name: grow;
+    /*animation-play-state: paused;*/
+    /*animation-name: grow;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;*/
+    /*dissapear*/
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+    -webkit-animation: move 10s infinite;
+    animation: move 10s infinite;
 }
 
 .astronaut-real-shela {
