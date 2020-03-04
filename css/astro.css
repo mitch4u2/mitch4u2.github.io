@@ -1041,9 +1041,73 @@ Reflect : #18426b;
 /* ASTRONAUT AIR PRESSURE */
 .airpressure {
     height: 100%;
-    width: 100%;
-    position:fixed;
-    top:30%;
-    left:2%;
-    z-index:-1;
+    /*width: 48%;*/
+    width: 21%;
+    position: fixed;
+    top: 30%;
+    left: 2%;
+    z-index: -1;
+}
+/*GAME SIDES */
+.human-side {
+    /*position: absolute;*/
+    height: 100%;
+    width: 13%;
+    left: 10%;
+    top: 0px;
+}
+.alien-craft {
+    position: absolute;
+    background: url(../img/spacecraft.png) no-repeat center center;
+    background-size: contain;
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 35%;
+    transform: rotate(5deg);
+    animation:alien 0.1s linear infinite;
+    z-index:1;
+}
+@keyframes alien {
+    0% {
+        filter: saturate(4)
+    }
+
+    50% {
+        filter: saturate(8)
+    }
+
+    100% {
+        filter: saturate(16)
+    }
+}
+/*.alien-craft{
+}*/
+
+.light {
+    width: 200px;
+    height: 400px;
+    /*margin-top: 5%;
+    margin-left: 63%;*/
+    top: 17%;
+    right: 11%;
+    z-index: 0;
+    position: absolute;
+    /*transform: rotate(5deg);*/
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 0 20px 20px 5px #0f8278;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,0.7) 66%, rgba(255,255,255,0.79) 76%, rgba(255,255,255,1) 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.7) 66%,rgba(255,255,255,0.79) 76%,rgba(255,255,255,1) 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.7) 66%,rgba(255,255,255,0.79) 76%,rgba(255,255,255,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    animation: alien 0.1s linear infinite;
+}
+#alien-pick {
+    opacity: 1;
+    position: absolute;
+    right: 11%;
+    top: 42%;
 }

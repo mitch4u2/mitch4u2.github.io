@@ -10,7 +10,11 @@ var play = function(userChoice) {
     var computerChoice = Math.random();
     if (computerChoice < 0.34) {
         computerChoice = "rock";
-        document.getElementById("chat").innerHTML = 'ROCK ';
+        document.getElementById("msg-game").innerHTML = 'Astronaut : ROCK ';
+        document.getElementById("alien-pick").className = "play rock";
+        // classList.item(3);
+        // document.getElementById("alien-pick").classList.item(2).removeClass;
+        // document.getElementById("alien-side").style.visibility = "visible";
         // document.getElementById("screen").innerHTML = '<img style="margin:0;width: 95px; height: 75px;" src="img/rock.jpg">';
         // document.getElementById("screen").style.backgroundImage = "url('img/rock.jpg')";
         // document.getElementById("screen").style.backgroundSize = "cover";
@@ -19,13 +23,21 @@ var play = function(userChoice) {
 
     } else if(computerChoice <= 0.67) {
         computerChoice = "paper";
-         document.getElementById("chat").innerHTML = 'PAPER ';
+        document.getElementById("msg-game").innerHTML = 'Astronaut : PAPER ';
+        document.getElementById("alien-pick").className = "play paper";
+
+
         // document.getElementById("screen").innerHTML = '<img style="margin:0;width: 95px; height: 75px;" src="img/paper.jpg" >';
         // document.getElementById("screen").style.backgroundImage = "url('img/paper.jpg')";
         // document.getElementById("screen").style.backgroundSize = "cover";
 	} else {
 		computerChoice = "scissors";
-        document.getElementById("chat").innerHTML = 'SCISSOR ';
+        document.getElementById("msg-game").innerHTML = 'Astronaut : SCISSOR ';
+        document.getElementById("alien-pick").className = "play scissors";
+
+        // document.getElementById("alien-pick").classList.item(2).removeClass;
+        // document.getElementById("alien-pick").classList.toggle("scissor");
+
         // document.getElementById("screen").innerHTML = '<img style="margin:0;width: 95px; height: 75px;" src="img/scissor.png" >';
 
         // document.getElementById("screen").style.backgroundImage = "url('img/scissor.png')";
@@ -78,14 +90,14 @@ var play = function(userChoice) {
 	}
     if (wins > 9) {
         // modal5.style.display = "block";
-        document.getElementById("modal-content").innerHTML="<p>You reached the max score of 10. <br /><br /><br /><br /><br /><br /><br /><br /><br />Congratulations, you have no life.</p>";
+        document.getElementById("msg-game").innerHTML ="<p>Astronaut : You reached the max score of 10. <br />Congratulations, you have no life.</p>";
         loses = 0;
 	    wins = 0;
 		//alert("You reached the max score of 10. <br />Congratulations, you have no life.");
 	}
     if (loses > 9) {
         // modal5.style.display = "block";
-        document.getElementById("modal-content").innerHTML="<p>Your opponent reached the max score of 10. <br /><br /><br /><br /><br /><br /><br /><br />We're sorry, you have no life.</p>";
+        document.getElementById("msg-game").innerHTML="<p>Astronaut : Your opponent reached the max score of 10. <br />We're sorry, you have no life.</p>";
         loses = 0;
 	    wins = 0;
 		//alert("Your opponent reached the max score of 10. <br />We're sorry, you have no life.");
@@ -159,17 +171,12 @@ window.onclick = function(event) {
 
 
 $(window).scroll(function () {
-
-
     // console.log($(window).scrollTop());
     if ($(window).scrollTop() > 700) {
         document.getElementById('blackhole').style.display = 'none';
         //document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
         //document.getElementById('astrocord').style.left = '-185px';
         //document.getElementById('astrocord').style.top = '-21%';
-        // left: -165px;
-        // top: -21 %;
-        // transform: rotate(90deg)//;
     }
     else {
         document.getElementById('blackhole').style.display = 'block';
@@ -180,11 +187,10 @@ $(window).scroll(function () {
         //document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
         //document.getElementById('astrocord').style.left = '-185px';
         //document.getElementById('astrocord').style.top = '-21%';
-        
     }
     if ($(window).scrollTop() > 5000)
     {
-        document.getElementById('astro-wrap-shela').style.display = 'block';// should be block
+        document.getElementById('astro-wrap-shela').style.display = 'block';
         document.getElementById('dropcord').style.display = 'block';
         document.getElementById('airpressure').style.display = 'block';
        
@@ -204,20 +210,13 @@ $(window).scroll(function () {
 
     }
 
-    //if ($(window).scrollTop() + $(window).height() < $(document).height() - 100) {
-    //    // document.getElementById('armright').style.animation = 'armDownRight 1s infinite';
-    //    // document.getElementById('armleft').style.animation = 'armDownRight 1s infinite';
-    //       document.getElementById('astrowoman').style.display = 'none';
-    //    // document.getElementById("chatwn").innerHTML = 'GOODBYE';
-    //    // document.getElementById("chat").innerHTML = 'GOODBYE';
-    //}
-
+    
    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-       document.getElementById('armright').style.animation='armDownRight 1s infinite';
-        document.getElementById('armleft').style.animation='armDownRight 1s infinite';
-       document.getElementById('four').style.display='block';
-       document.getElementById("chatwn").innerHTML='GOODBYE';
-       document.getElementById("chat").innerHTML='GOODBYE';
+       // document.getElementById('armright').style.animation='armDownRight 1s infinite';
+       // document.getElementById('armleft').style.animation='armDownRight 1s infinite';
+       // document.getElementById('four').style.display='block';
+       // document.getElementById("chatwn").innerHTML='GOODBYE';
+       // document.getElementById("chat").innerHTML='GOODBYE';
    }
 });
 
