@@ -5,7 +5,20 @@ var play = function(userChoice) {
 					
 	document.getElementById("player").innerHTML="";
 	document.getElementById("opponent").innerHTML="";
-	document.getElementById("results").innerHTML="";
+    document.getElementById("results").innerHTML = "";
+
+    document.getElementsByClassName("lightAnimation")[0].style.animationPlayState = 'running';
+    document.getElementById("alien-pick").style.animationPlayState = 'running';
+    
+    // to Retrigger the Animation
+    var light = document.getElementById("light");
+    var newLight = light.cloneNode(true);   
+    light.parentNode.replaceChild(newLight, light);
+
+    var pick = document.getElementById("alien-pick");
+    var newPick = pick.cloneNode(true);
+    pick.parentNode.replaceChild(newPick, pick);
+
 
     var computerChoice = Math.random();
     if (computerChoice < 0.34) {
@@ -198,7 +211,7 @@ $(window).scroll(function () {
     else {
         document.getElementById('astro-wrap-shela').style.display = 'none';
         document.getElementById('dropcord').style.display = 'none';
-        console.log(document.getElementById('airpressure').style.left);
+        // console.log(document.getElementById('airpressure').style.left);
         if (document.getElementById('airpressure').style.left == "72%") {
             document.getElementById('airpressure').style.display = 'none';
         }

@@ -57,12 +57,12 @@ button.play {
     }
 
     button.play.paper {
-        background: #efefef url("../img/scissor.png") no-repeat;
+        background: #efefef url("../img/paper.jpg") no-repeat;
         background-size: cover;
     }
 
     button.play.scissors {
-        background: #efefef url("../img/paper.jpg") no-repeat;
+        background: #efefef url("../img/scissor.png") no-repeat;
         background-size: cover;
     }
 
@@ -340,17 +340,32 @@ table {
     background-size: 100% 100%;
     width: 300px;
     height: 550px;
-    width: 300px;
-    height: 550px;
     position: absolute;
     right: 0;
+    
 }
 
-
+td {
+    font-family: 'Orbitron', courier, sans-serif;
+    /*font-weight: 900;*/
+    font-size: 0em;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 1px rgba(157,208,154,.3);
+    transition: transform 1.2s; /* Animation */
+}
 td:hover {
     background-color: black;
     opacity: 0.5;
     cursor: pointer;
+    font-size: 1.5em;
+}
+
+td:active {
+    background-color: black;
+    opacity: 0.5;
+    cursor: pointer;
+    font-size: 2.5em;
 }
 
 
@@ -377,10 +392,10 @@ td:hover {
     /*left: 45%;*/
     /*margin-top: 15%;*/
     z-index: 100;
-    width: 120px;
-    height: 120px;
-    left: 45%;
-    top: 201px;
+    width: 50%;
+    height: 50%;
+    left: 21%;
+    top: 20%;
     background: url(../img/Blackhole.ico) no-repeat center center;
     background-size: contain;
     -webkit-animation: spin 1.4s linear infinite;
@@ -394,37 +409,18 @@ td:hover {
     animation: spin 0.4s linear infinite;
 }
 
-
-#planet-icon1 {
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    z-index: 100;
-    width: 120px;
-    height: 120px;
-    background: url(../img/foursites.jpeg) no-repeat center center;
-    background-size: contain;
-    -webkit-animation: spin 1.4s linear infinite;
-    -moz-animation: spin 1.4s linear infinite;
-    animation: spin 1.4s linear infinite;
-}
-
-    #planet-icon1:active {
-        -webkit-animation: spin 0.4s linear infinite;
-        -moz-animation: spin 0.4s linear infinite;
-        animation: spin 0.4s linear infinite;
-    }
-
-
-
 .glow {
-    font-family: 'Orbitron', courier, sans-serif;
-    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    width:30%;
+    /*color: white;*/
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 5em;
     color: rgba(155, 182, 255, 0.22);
     text-shadow: 0 0 1px rgba(157,208,154,.3);
     position: absolute;
-    left: 42%;
+    left: 32%;
     top: 0;
     /*margin-top:-20px;*/
 }
@@ -450,8 +446,29 @@ td:hover {
     /*margin-top: -80px;*/
 }
 
+body .solar_systm .planet_description {
+    width: 420px;
+    text-align: center;
+    /*position: absolute;*/
+    margin-left: 70%;
+    /*left: 0;*/
+    /*z-index: 2;*/
+    /*right: 0;*/
+    color: white;
+    font-weight: 200;
+    -webkit-transition: all .4s 0s;
+    transition: all .4s 0s;
+    text-transform: uppercase;
+    /*z-index: 1;*/
+}
 
-
+    body .solar_systm .planet_description p {
+        text-align: center;
+        line-height: 26px;
+        margin-top: 14px;
+        opacity: 0.9;
+        margin-bottom: 10px;
+    }
 
 
 // Variables

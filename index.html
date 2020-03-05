@@ -401,33 +401,27 @@
                 <section class="human-side">
                     <br /><br /><br />
                     <button class="play rock" type="button" onclick="play('rock')"></button><br />
-                    <button class="play paper" type="button" onclick="play('scissors')"></button><br />
-                    <button class="play scissors" type="button" onclick="play('paper')"></button><br />
+                    <button class="play paper" type="button" onclick="play('paper')"></button><br />
+                    <button class="play scissors" type="button" onclick="play('scissors')"></button><br />
                     <div style="clear:both;"></div><br />
                     <span id="player"></span> <span id="opponent"></span> <br />
                     <h2 id="results">ROCK  SCISSOR  PAPER</h2>
                 </section>
                 <section class="space-craft">
                     <div class="alien-craft"></div>
-                    <div class="light"></div>
+                    <div id="light" class="lightAnimation"></div>
                 </section>
                 <section id="alien-side" class="alien-side">
-                    <!--<button class="play rock" type="button" ></button><br />
-                    <button class="play paper" type="button" ></button><br />
-                    <button class="play scissors" type="button" ></button><br />-->
-                    <button id="alien-pick" class="play" type="button"></button><br />
+                    <button id="alien-pick" class="" type="button"></button><br />
                     <div style="clear:both;"></div><br />
-                    <!-- seperator -->
-                    <!--<span id="player"></span> <span id="opponent"></span> <br />-->
-                    <!--<h2 id="results">ROCK  SCISSOR  PAPER</h2>-->
                 </section>
 
                 <aside class="aside">
                     <div class="scorebox">
-                        <h2>Score</h2>
-                        <div class="score-num"><span id="wins">0</span> <br />wins</div>
+                        <h2>Score / 10</h2>
+                        <div class="score-num"><span id="wins">0</span> <br />Astro</div>
                         <div class="score-divider"><span>-</span></div>
-                        <div class="score-num"><span id="loses">0</span> <br />loses</div>
+                        <div class="score-num"><span id="loses">0</span> <br />UFO</div>
                     </div>
 
                 </aside>
@@ -700,46 +694,69 @@
             <div id="planet-icon-skills" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
             <div id="planet">
                 <table>
-                    <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025');"></td></tr>
-                    <tr><td onclick="togglePlanet('Neptune','1.12','3.88','0.671','17.1');"></td></tr>
-                    <tr><td onclick="togglePlanet('Uranus','0.889','4.01','0.718','14.5');"></td></tr>
-                    <tr><td onclick="togglePlanet('Saturn','0.916','9.45','0.444','95.2');"></td></tr>
-                    <tr><td onclick="togglePlanet('Jupiter','2.36','11.21','0.414','317.8');"></td></tr>
-                    <tr><td onclick="togglePlanet('Mars','0.377','0.532','1.03','0.107');"></td></tr>
-                    <tr><td onclick="togglePlanet('Earth','1','1','1','1');"></td></tr>
-                    <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815');"></td></tr>
-                    <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553');"></td></tr>
+                    <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025');">Pluto</td></tr>
+                    <tr><td onclick="togglePlanet('Neptune','1.12','3.88','0.671','17.1');">Neptune</td></tr>
+                    <tr><td onclick="togglePlanet('Uranus','0.889','4.01','0.718','14.5');">Uranus</td></tr>
+                    <tr><td onclick="togglePlanet('Saturn','0.916','9.45','0.444','95.2');">Saturn</td></tr>
+                    <tr><td onclick="togglePlanet('Jupiter','2.36','11.21','0.414','317.8');">Jupiter</td></tr>
+                    <tr><td onclick="togglePlanet('Mars','0.377','0.532','1.03','0.107');">Mars</td></tr>
+                    <tr><td onclick="togglePlanet('Earth','1','1','1','1');">Earth</td></tr>
+                    <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815');">Venus</td></tr>
+                    <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553');">Mercury</td></tr>
                 </table>
 
                 <script>
+                    var VenusDesc = "Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star." 
+                    var PlutoDesc = "Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm.";
+                    var NeptuneDesc = "Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846.";
+                    var UranusDesc = "The first planet to be discovered by scientists. The planet is notable for its dramatic tilt, which causes its axis to point nearly directly at the sun.";
+                    var SaturnDesc = "Saturn is the sixth planet from the sun and the second largest planet in the solar systm. Saturn was the Roman name for Cronus, the lord of the Titans.";
+                    var JupiterDesc = "Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology.";
+                    var MarsDesc = "Fourth planet from the Sun and the second smallest planet in the solar systm. Named after the Roman god of war often described as the “Red Planet”.";
+                    var EarthDesc = "Earth, our home. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.";
+                    var MercuryDesc = "The closest planet to the sun. It circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.";
+
+
                     function togglePlanet(Planet, gravity, diameter, length, mass) {
+                        // planetDesc
+                        console.log(VenusDesc);
+                        var PlanetDesc =eval( Planet + "Desc");
+                        console.log(PlanetDesc);
+                        
+                        document.getElementById("planetDesc").innerHTML = PlanetDesc;
                         document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
                         document.getElementById("glow").innerHTML = Planet;
-                        document.getElementById("chat").innerHTML = Planet;
-                        document.getElementById("gravity").innerHTML = 'Gravity';
-                        document.getElementById("diameter").innerHTML = 'Diameter';
-                        document.getElementById("length").innerHTML = 'Length of the Day';
-                        document.getElementById("mass").innerHTML = 'Mass';
+                        // Chande the class to houston  // document.getElementById("chat").innerHTML = Planet;
+                        // document.getElementById("gravity").innerHTML = 'Gravity';
+                        //
+                        // document.getElementById("diameter").innerHTML = 'Diameter';
+                        // document.getElementById("length").innerHTML = 'Length of the Day';
+                        // document.getElementById("mass").innerHTML = 'Mass';
 
                         var grav = (gravity * 100) / 3;
                         var diam = (diameter * 100) / 12;
                         var len = (length * 100) / 180;
                         var ma = (mass * 100) / 317;
 
-                        document.getElementById("gravprog").style.width = grav + '%';
-                        document.getElementById("diamprog").style.width = diam + '%';
-                        document.getElementById("lenprog").style.width = len + '%';
-                        document.getElementById("massprog").style.width = ma + '%';
+                        //document.getElementById("gravprog").style.width = grav + '%';
+                        //document.getElementById("diamprog").style.width = diam + '%';
+                        //document.getElementById("lenprog").style.width = len + '%';
+                        //document.getElementById("massprog").style.width = ma + '%';
 
-                        document.getElementById("gravprog").innerHTML = '<span>' + gravity + ' (m/s2) </span>';
-                        document.getElementById("diamprog").innerHTML = '<span>' + Math.round(diameter * 12.756).toFixed(2) + ' (km) </span>';
-                        document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
-                        document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
+                        //document.getElementById("gravprog").innerHTML = '<span>' + gravity + ' (m/s2) </span>';
+                        //document.getElementById("diamprog").innerHTML = '<span>' + Math.round(diameter * 12.756).toFixed(2) + ' (km) </span>';
+                        //document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
+                        //document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
 
 
-
+                        // this idea doesnt work
                         // Change the planet icon width in propportion with earth mass width
-                        //document.getElementById("planet-icon-skills").style.width = (120 * mass) + "px";
+                        //var PlanetDiameter = (120 * diameter);
+                        //console.log(PlanetDiameter);
+                        //var str = PlanetDiameter + "px";
+                        //console.log(str);
+                        //document.getElementById("planet-icon-skills").style.height = str;
+                        //document.getElementById("planet-icon-skills").style.width = str;
                         // it didn4t work because the difference between planet masses are huge
 
 
@@ -754,8 +771,8 @@
                         x.onmouseup = function () {
                             audio.pause();
                             document.getElementById("planet-icon-skills").style.animation = "spin 1.4s linear infinite";
-
                         };
+
                         // END Planet Sound
 
                         /*document.getElementById("testa").css('width', document.getElementById("testa").attr('aria-valuenow')+'44%');*/
@@ -785,43 +802,21 @@
             </div>
 
             <div id="skillrow">
-                <div id="vib" style="padding-bottom:-600px;" class="row">
-                    <div class="col-md-6">
-                        <div class="skill-progress">
-                            <div class="skill-title"><h3 id="gravity">Coding</h3></div>
-                            <div class="progress">
-                                <div id="gravprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                    <span>95%</span>
-                                </div>
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill-progress -->
-
-                        <div class="skill-progress">
-                            <div class="skill-title"><h3 id="diameter">Business savvy</h3></div>
-                            <div class="progress">
-                                <div id="diamprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                    <span>80%</span>
-                                </div>
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill-progress -->
-                        <div class="skill-progress">
-                            <div class="skill-title"><h3 id="length">Communication</h3></div>
-                            <div class="progress">
-                                <div id="lenprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <span>75%</span>
-                                </div>
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill-progress -->
-                        <div class="skill-progress">
-                            <div class="skill-title"><h3 id="mass">Problem Solving</h3></div>
-                            <div class="progress">
-                                <div id="massprog" class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <span>75%</span>
-                                </div>
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill-progress -->
-                    </div><!-- /.col-md-6 -->
-                </div><!-- /.row -->
+                <div class='solar_systm'>
+                    <div class='planet venus'>
+                        <div class='planet_description venus'>
+                            <p id="planetDesc"></p>
+                            <label for='readVenus'>
+                                <a>
+                                    Read Mor
+                                    <span>e</span>
+                                </a>
+                            </label>
+                        </div>
+                        <div class='overlay'></div>
+                        <br /><br /><br />
+                    </div>
+                </div>
             </div>
         </div><!-- /.container -->
     </section>

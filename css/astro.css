@@ -1065,9 +1065,14 @@ Reflect : #18426b;
     width: 35%;
     height: 35%;
     transform: rotate(5deg);
-    animation:alien 0.1s linear infinite;
-    z-index:1;
+    /*animation: alien 0.1s linear infinite;*/
+    animation: alien 0.1s linear infinite, MoveUpDown 2s linear infinite;
+    z-index: 1;
 }
+.space-craft {
+    animation: MoveUpDown 2.5s linear infinite;
+}
+
 @keyframes alien {
     0% {
         filter: saturate(4)
@@ -1081,33 +1086,113 @@ Reflect : #18426b;
         filter: saturate(16)
     }
 }
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        top: 0;
+    }
+
+    50% {
+        top: 5%;
+    }
+}
+@keyframes MoveUpDownLight {
+    0%, 100% {
+        /*margin-top: 0;*/
+        top: 17%;
+    }
+
+    50% {
+        /*margin-top: 2%;*/
+        top: 20%;
+    }
+}
+@keyframes MoveUpDownHover {
+    0%, 100% {
+        height: 400px;
+    }
+
+    50% {
+        height: 380px;
+    }
+}
+
+
+/*@keyframes AlienPickHover {
+    0%, 100% {
+        top: 42%;
+    }
+
+    50% {
+        top: 35%;
+    }
+}*/
+
+
+@keyframes MoveUpDownAlienPick {
+    0% {
+        top: 12%;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    
+    100% {
+        top: 42%;
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+@keyframes Zoot {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 400px;
+    }
+}
+@keyframes Showit {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 /*.alien-craft{
 }*/
 
-.light {
+/*.light {
+}*/
+.lightAnimation {
     width: 200px;
     height: 400px;
-    /*margin-top: 5%;
-    margin-left: 63%;*/
     top: 17%;
     right: 11%;
     z-index: 0;
     position: absolute;
-    /*transform: rotate(5deg);*/
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 20%;
-    border-bottom-right-radius: 20%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
     box-shadow: 0 20px 20px 5px #0f8278;
     background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,0.7) 66%, rgba(255,255,255,0.79) 76%, rgba(255,255,255,1) 99%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.7) 66%,rgba(255,255,255,0.79) 76%,rgba(255,255,255,1) 99%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,0.7) 66%,rgba(255,255,255,0.79) 76%,rgba(255,255,255,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-    animation: alien 0.1s linear infinite;
+    animation: alien 0.1s linear infinite, Zoot 0.3s linear 1;
+    animation-play-state: paused;
 }
+.alienPickAnimation {
+    animation: MoveUpDownAlienPick 2.5s forwards 1;
+}
+
+
 #alien-pick {
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     right: 11%;
-    top: 42%;
+    top: 12%;
+    animation:MoveUpDownAlienPick 2.5s forwards 1;
+    animation-play-state: paused;
 }
