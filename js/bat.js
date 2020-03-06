@@ -209,7 +209,7 @@ $(window).scroll(function () {
        
     }
     else {
-        document.getElementById('astro-wrap-shela').style.display = 'none';
+        // document.getElementById('astro-wrap-shela').style.display = 'none';
         document.getElementById('dropcord').style.display = 'none';
         // console.log(document.getElementById('airpressure').style.left);
         if (document.getElementById('airpressure').style.left == "72%") {
@@ -280,65 +280,7 @@ var terminal = function() {
 }
 
 
-var electric = function () {
-
-    var canvas = document.getElementById("electric");
-    // var canvas2 = document.getElementById("electric2");
-    var ctx1 = canvas.getContext("2d");
-    // var ctx2 = canvas2.getContext("2d");
-    var cHeight = 300;
-    var boltHeight = 60;
-    const arrayContext = [ctx1];
-
-    function repeatOften() {
-        arrayContext.forEach(function (element) {
-            drawLightning(element);
-        })
-        requestAnimationFrame(repeatOften);
-    };
-
-    requestAnimationFrame(repeatOften);
-
-    function drawLightning(ctx) {
-            ctx.clearRect(0, 0, 500, 300);
-            var grad = ctx.createLinearGradient(0, 0, 0, 300);
-            grad.addColorStop(0, "black");
-
-            ctx.strokeStyle = "white";
-
-            ctx.shadowColor = '#00ffff';
-            ctx.shadowBlur = 10;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 0;
-
-            ctx.beginPath();
-            ctx.lineWidth = 2;
-            ctx.moveTo(0, 150);
-            ctx.lineTo(100, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(200, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(300, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(400, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(500, 150);
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.lineWidth = 4;
-            ctx.moveTo(0, 150);
-            ctx.lineTo(100, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(200, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(300, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(400, cHeight / 2 - (rand(boltHeight) - boltHeight / 2));
-            ctx.lineTo(500, 150);
-            ctx.stroke();
-    }
-  
-  function rand(ceil){
-    return Math.floor((Math.random() * ceil) + 1); 
-  }
-          
-  canvas.style.display='none';
-  // canvas2.style.display = 'none';
-}();
+ 
 
 
 
@@ -514,3 +456,5 @@ $("#airpressure").emitter({
         acceleration: 5200
     }
 }).render();
+
+

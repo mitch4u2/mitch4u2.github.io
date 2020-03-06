@@ -133,8 +133,6 @@
                         // element.classList.remove("mystyle");
                     // });
                 // }
-
-
                 //DRAG DROP
                 function allowDrop(ev) {
                     ev.preventDefault();
@@ -691,22 +689,23 @@
         <div class="container">
 
             <h1 id="glow" class="glow">SKILLS</h1>
-            <div id="planet-icon-skills" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
+            <!--<div id="planet-icon-skills" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>-->
+            <!--<div id="planet-icon-skills" style="display:none;" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>-->
             <div id="planet">
                 <table>
-                    <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025');">Pluto</td></tr>
-                    <tr><td onclick="togglePlanet('Neptune','1.12','3.88','0.671','17.1');">Neptune</td></tr>
-                    <tr><td onclick="togglePlanet('Uranus','0.889','4.01','0.718','14.5');">Uranus</td></tr>
-                    <tr><td onclick="togglePlanet('Saturn','0.916','9.45','0.444','95.2');">Saturn</td></tr>
-                    <tr><td onclick="togglePlanet('Jupiter','2.36','11.21','0.414','317.8');">Jupiter</td></tr>
-                    <tr><td onclick="togglePlanet('Mars','0.377','0.532','1.03','0.107');">Mars</td></tr>
-                    <tr><td onclick="togglePlanet('Earth','1','1','1','1');">Earth</td></tr>
-                    <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815');">Venus</td></tr>
-                    <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553');">Mercury</td></tr>
+                    <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025','2357' );">Pluto</td></tr>
+                    <tr><td onclick="togglePlanet('Neptune','1.12','3.88','0.671','17.1','2364');">Neptune</td></tr>
+                    <tr><td onclick="togglePlanet('Uranus','0.889','4.01','0.718','14.5','2344');">Uranus</td></tr>
+                    <tr><td onclick="togglePlanet('Saturn','0.916','9.45','0.444','95.2','2355');">Saturn</td></tr>
+                    <tr><td onclick="togglePlanet('Jupiter','2.36','11.21','0.414','317.8','2375');">Jupiter</td></tr>
+                    <tr><td onclick="togglePlanet('Mars','0.377','0.532','1.03','0.107','2372');">Mars</td></tr>
+                    <tr><td onclick="togglePlanet('Earth','1','1','1','1','2392');">Earth</td></tr>
+                    <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815','2342');">Venus</td></tr>
+                    <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553','2369');">Mercury</td></tr>
                 </table>
 
                 <script>
-                    var VenusDesc = "Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star." 
+                    var VenusDesc = "Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star."
                     var PlutoDesc = "Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm.";
                     var NeptuneDesc = "Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846.";
                     var UranusDesc = "The first planet to be discovered by scientists. The planet is notable for its dramatic tilt, which causes its axis to point nearly directly at the sun.";
@@ -717,14 +716,16 @@
                     var MercuryDesc = "The closest planet to the sun. It circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.";
 
 
-                    function togglePlanet(Planet, gravity, diameter, length, mass) {
+                    function togglePlanet(Planet, gravity, diameter, length, mass, Code3d) {
                         // planetDesc
-                        console.log(VenusDesc);
-                        var PlanetDesc =eval( Planet + "Desc");
-                        console.log(PlanetDesc);
-                        
+                        var PlanetDesc = eval(Planet + "Desc");
+                        var PlanetSrc = "https://solarsystem.nasa.gov/gltf_embed/" + Code3d;
+                        // var planetframe = '<iframe id="Earth"   class="planet3d" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="100%" height="350" frameborder="0" />'
                         document.getElementById("planetDesc").innerHTML = PlanetDesc;
-                        document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
+                        document.getElementById("Earth").src = PlanetSrc;
+                        // below is the previous version using planets Icons
+                        //document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
+                        // we are heading into more realistic nasa 3D images
                         document.getElementById("glow").innerHTML = Planet;
                         // Chande the class to houston  // document.getElementById("chat").innerHTML = Planet;
                         // document.getElementById("gravity").innerHTML = 'Gravity';
@@ -738,6 +739,32 @@
                         var len = (length * 100) / 180;
                         var ma = (mass * 100) / 317;
 
+                        //Number Incrementation Animation for Planets (ex : gravity)
+
+                        //Animate my counter from 0 to set number (6)
+
+                        var from = 0;
+                        var to = 40;
+
+                        $({ counter: from }).animate(
+                            { counter: to },
+                            {
+                                //Animate over a period of 2seconds
+                                duration: 2000,
+                                //Progress animation at constant pace using linear
+                                easing: "linear",
+                                step: function () {
+                                    //Every step of the animation, update the number value
+                                    //Use ceil to round up to the nearest whole int
+                                    $(".total").text(Math.ceil(this.counter));
+                                },
+                                complete: function () {
+                                    //Could add in some extra animations, like a bounc of colour change once the count up is complete.
+                                }
+                            }
+                        );
+
+
                         //document.getElementById("gravprog").style.width = grav + '%';
                         //document.getElementById("diamprog").style.width = diam + '%';
                         //document.getElementById("lenprog").style.width = len + '%';
@@ -747,18 +774,6 @@
                         //document.getElementById("diamprog").innerHTML = '<span>' + Math.round(diameter * 12.756).toFixed(2) + ' (km) </span>';
                         //document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
                         //document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
-
-
-                        // this idea doesnt work
-                        // Change the planet icon width in propportion with earth mass width
-                        //var PlanetDiameter = (120 * diameter);
-                        //console.log(PlanetDiameter);
-                        //var str = PlanetDiameter + "px";
-                        //console.log(str);
-                        //document.getElementById("planet-icon-skills").style.height = str;
-                        //document.getElementById("planet-icon-skills").style.width = str;
-                        // it didn4t work because the difference between planet masses are huge
-
 
                         // Planet Sound
                         var x = document.getElementById("planet-icon-skills");
@@ -774,7 +789,6 @@
                         };
 
                         // END Planet Sound
-
                         /*document.getElementById("testa").css('width', document.getElementById("testa").attr('aria-valuenow')+'44%');*/
                         /*document.getElementById("screen").style.animation='blinker 1.1s linear 1';
                         //document.getElementById("example4").innerHTML='THANK YOU';
@@ -800,23 +814,33 @@
                 </script>
                 <!--<img src="img/planets.jpg" >-->
             </div>
-
             <div id="skillrow">
                 <div class='solar_systm'>
                     <div class='planet venus'>
                         <div class='planet_description venus'>
                             <p id="planetDesc"></p>
-                            <label for='readVenus'>
-                                <a>
-                                    Read Mor
-                                    <span>e</span>
-                                </a>
-                            </label>
+                            <!--<label for='readVenus'>-->
+                            <div class="info-nbr">
+                                <span class="total">44</span>
+                                <br />Gravity
+                            </div>
+                            <div class="info-nbr">
+                                <span class="total">44</span>
+                                <br />Gravity
+                            </div>
+                                <!--</label>-->
+                            </div>
+                            <!--<div class='overlay'></div>-->
+                            <br /><br /><br />
                         </div>
-                        <div class='overlay'></div>
-                        <br /><br /><br />
-                    </div>
                 </div>
+            </div>
+            <!--<div id="info-box">
+                <h1>Gravity</h1>
+                <span class="total">44</span>
+            </div>-->
+            <div id="nasa3d">
+                <iframe id="Earth" class="planet3d" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="100%" height="350" frameborder="0" />
             </div>
         </div><!-- /.container -->
     </section>
@@ -936,13 +960,8 @@
     <!-- Facts Section -->
     <section id="facts" ondragover="allowDrop(event)" class="facts-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
         <p id="glow2" class="glow2">“We are travelers on a cosmic journey, stardust, swirling and dancing in the eddies and whirlpools of infinity. Life is eternal. We have stopped for a moment to encounter each other, to meet, to love, to share.This is a precious moment. It is a little parenthesis in eternity.”</p>
-
-        <!--<canvas id="electric" class="she">
-    </canvas>
-    <canvas id="electric" class="he">
-    </canvas>-->
-
         <canvas id="electric" height="200"></canvas>
+
         <!--<canvas id="electric2" height="200"></canvas>-->
         <!--<div id="planet-icon-love"
          onmouseup="PlayStatelove('paused');document.getElementById('electric').style.display = 'none';" onmousedown="PlayStatelove('running');document.getElementById('electric').style.display = '';">
@@ -1082,69 +1101,7 @@
     <section id="blog" class="latest-blog-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Latest Post</h2>
-            <div id="myModal1" class="modal1">
-                <!-- Modal content -->
-                <div class="modal-content1">
-                    <span class="close">&times;</span>
-                    <div class="color-1">
-                        <div class="containerblog">
-                            <!-- Top Navigation -->
-                            <div class="contentblog">
-                                <header style="background: #68c3a3; background-size:150% 30%; " class="codrops-header">
-                                    <h1>The equation of Greatness</h1>
-                                </header>
-                                <div class="dummy dummy-text">
-                                    <br><br><br>
-                                    <p>
-                                        Recently i watched a movie called <strong>"Confession of a dangerous mind"</strong>, the first few minutes of that movie changed my life when the main character was standing butt naked in front of a TV and speaking internally those lines:
-
-                                        <strong>When you are young, your potential is infinite. You might do anything, really. You might be Einstein. You might be DiMaggio. Then you get to an age where what you might be gives way to what you have been. You weren't Einstein. You weren't anything. That's a bad moment.</strong>
-                                        <br>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V5-a6WeJXFk" frameborder="0" allowfullscreen></iframe>
-                                        <br>
-
-                                        those words was the most brutal ruthless unkind and cruel thing i have ever heard because i felt like he is talking to me, so i turned off the laptop and went to bed deeply questioning the life i have, am i a mediocre?, is it too late ? how can i achieve greatness?<br>
-
-                                        after two weeks of depression  thinking of a way to escape mediocrity i came up with the Equation of greatness.<br>
-
-                                        <strong> (Effort x Time) + Luck  = Greatness</strong>
-                                        it's a simple easy equation if you are 5 years old but if you are 25 years or older it's hard to applies it because you have lost a lot of <strong>time</strong> and mathematically speaking if the variable <strong>time</strong>strong> is low the result is going to be low, so the solution here is to boost the <strong>effort</strong>,  but how?<br>
-                                        <h1 style="text-align:center;">EFFORT</h1>
-
-                                        Effort needs energy and a motive and there is a million source of energy in this world (money,responsibility,survival...) but we need to choose the best of energy the strongest and the most effective, <strong>Remember Time is not on our side</strong>.<br>
-                                        there is no energy as powerful as <strong> L.F.R Love & Fear & Revenge</strong><br>
-                                        the <strong>Love</strong> for Success<br>
-                                        the <strong>Fear</strong> of Mediocrity<br>
-                                        the <strong>Revenge</strong> of life for not giving you what you want<br>
-                                        find those energies, find them like your life depends on them because you will be surprised by the things you are capable of doing! the effort becomes limitless and infinite.<br>
-
-
-                                        <h1 style="text-align:center;">LUCK</h1>
-                                        <strong>
-                                            function getLuck() {<br>
-                                            return Math.random();<br>
-                                            }
-                                        </strong><br>
-
-                                        <h1 style="text-align:center;">TIME</h1>
-
-                                        Now the equation is giving us a great result but wait you have to be careful, it is true that the variable Time can't be boosted but it can be stopped so we have to stop wasting time,
-                                        <strong>Habit</strong> is the key to keep the time on our side we have to beat the clock by programming our mindset <br>
-
-
-                                        <blockquote>
-                                            we are what we repeatedly do.
-                                            excellence then, is not an act, but a habit
-                                        </blockquote>
-                                        -Aristotle
-                                    </p>
-                                </div>
-                                <!-- Related demos -->
-                            </div><!-- /content -->
-                        </div><!-- /container -->
-                    </div>
-                </div>
-            </div>
+            
 
             <div id="myModal2" class="modal2">
                 <!-- Modal content -->

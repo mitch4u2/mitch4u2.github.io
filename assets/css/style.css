@@ -1003,11 +1003,12 @@ Resume Timeline
 
 /* === Skill Section === */
 .skills-section {
-    background: url('../../img/demo-1-bg.jpg') no-repeat center center;
+    /*background: url('../../img/demo-1-bg.jpg') no-repeat center center;*/
+    background-color: black;
     background-size: cover;
     color: #fff;
     position: relative;
-    height: 555px;
+    height: 655px;
     font-family: 'Montserrat', sans-serif;
 }
 
