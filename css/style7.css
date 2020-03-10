@@ -41,12 +41,11 @@
 
 
 
-        .cs-text span 
-        
+        /*.cs-text span 
         {
             background: url(../img/black-icon.png) no-repeat center center;
             background-size: cover;
-        }
+        }*/
 
         .cs-text span:nth-child(1) {
             -webkit-transform: translate(300%) translate(-60px);

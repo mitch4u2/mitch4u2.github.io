@@ -85,10 +85,10 @@
                 <p>Good Luck</p>
             </main>
 
-            <canvas id="demo-canvas"></canvas>
+            <canvas id="demo-canvas"></canvas><!--nodes animation cursor--> 
             <section class="main"
                      style="position: absolute; left: 50%; margin-left: -302px; top: 50%; ">
-                <!--<h2 class="cs-text">
+                <h2 class="cs-text">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -110,9 +110,11 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <span onmouseup="togglePlayState('paused');" onmousedown="togglePlayState('running');" id="blackhole" class="blackhole"></span>
-                </h2>-->
-                <h2 class="cs-text"><span id="blackhole" class="blackhole"></span></h2>
+                    <!--<span onmouseup="togglePlayState('paused');" onmousedown="togglePlayState('running');" id="blackhole" class="blackhole"></span>-->
+                    <span id="blackhole" class="blackhole"></span>
+
+                </h2>
+                <!--<h2 class="cs-text"><span id="blackhole" class="blackhole"></span></h2>-->
             </section>
 
             <!-- Script to pause/start the animation -->
@@ -133,7 +135,7 @@
                         // element.classList.remove("mystyle");
                     // });
                 // }
-                //DRAG DROP
+                // DRAG DROP
                 function allowDrop(ev) {
                     ev.preventDefault();
                 }
@@ -148,43 +150,19 @@
                     var data = ev.dataTransfer.getData("text");
                     ev.target.appendChild(document.getElementById(data));
                     // document.getElementById("airpressure").style.top = "30%";
-                    document.getElementById("airpressure").style.left = '72%';
-                    document.getElementById("airpressure").style.position = 'fixed';
-                    document.getElementById("droppoint").style.zIndex = '1';
-                    document.getElementById("droppoint").style.position = 'fixed';
-                    document.getElementById("droppoint").style.top = '-23%';
-                    document.getElementById("droppoint").style.marginTop = '0%';
+                    var droppoint = document.getElementById("droppoint");
+                    var airpressure = document.getElementById("droppoint");
+                    airpressure.style.left = '72%';
+                    airpressure.style.position = 'fixed';
+                    droppoint.style.zIndex = '1';
+                    droppoint.style.position = 'fixed';
+                    droppoint.style.top = '-23%';
+                    droppoint.style.marginTop = '0%';
                     document.getElementsByClassName("astronaut-real")[0].style.animation = "grow 2s forwards 1";
-                    //document.getElementsByClassName("astronaut-real")[0].style.animation = "grow 2s forwards 1";
-                    // document.getElementById("astro-wrap").style.transition = 'opacity 1.2s linear';
-                    // document.getElementById("astrocord").style.zIndex = '10';
-                    // document.getElementById("astro-wrap-shela").style.zIndex = '999999';
-                    // document.getElementById("dropcord").style.position = 'fixed';
-                    // document.getElementById("cord").style.position = 'fixed';
-                     
-                    // document.getElementById("batterywn").style.animationPlayState = "running";
-                    // document.getElementById("screenwn").style.animation = 'blinker 1.1s linear 1';
-                    // document.getElementById("screen").style.animation = 'blink 1.1s linear infinite';
-                    // document.getElementById("battery").style.animation = 'mymove2 1s';
-                    // document.getElementById("armleft").style.animation = 'armByeRight 1.1s linear infinite';
-                    // document.getElementById("astronaut").className += ' shake-hard shake-constant';
-                    // document.getElementById("astronaut").style.animation = "armByeRight";
-
-                    // document.getElementById("astro-wrap-shela").style.transform = 'rotate(-64deg)';
-                    // document.getElementById("astro-wrap-shela").style.right = '20%';
-                    // document.getElementById("astro-wrap-shela").style.marginTop = '-42%';
-
-                    // document.getElementById('astrocord').style.top = '-21%';
-                    // document.getElementById("astrocord").style.top = '-21%';
-                    // document.getElementById("astrowoman").className += ' astronaut';
-                    // document.getElementById("chat").innerHTML = 'I love you...';
-                    // $("#batterywn").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () {
-                    // document.getElementById("chatwn").innerHTML = '♥♥♥♥♥♥♥♥♥';
-                    //});
                 }
             </script>
 
-            <h1 class="msg">..shhh.. ..houston... ..404... ..shhhh... ..lost.. ..in.. ..space. .shhhhh...</h1>
+            <!--<h1 class="msg">..shhh.. ..houston... ..404... ..shhhh... ..lost.. ..in.. ..space. .shhhhh...</h1>-->
 
             <div id="dragonball" >
                 <div id="astrocord" class="astronaut__cord">
@@ -197,104 +175,8 @@
             <div id="astro-wrap" class="astro-wrap">
                 <a class="astronaut-real" href="#" title="return to base"></a>
             </div>
-            
-            <!--<div id="astronaut" class="astronaut" style="display:none;">
-                <div class="head" style="z-index:100">
-                    <div class="glass">
-                        <div class="reflect"></div>
-                    </div>
-                </div>
-
-                <div class="neck"></div>
-                <div class="chest">
-
-                    <div class="face-panel" id="screen" style="width:100px;height:80px;">
-                        <div id="chat" class="chat" style="font-size:15px;margin-left:-10px;">
-                            HELP ME ==>
-                        </div>
-                        <div class="battery">
-                            <div id="battery" class="juice"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="back"></div>
-
-                <div class="arm left" id="armleft">
-                    <div class="top-arm"></div>
-                    <div class="bottom-arm"></div>
-                    <div class="hand-left"></div>
-                    <div class="finger"></div>
-                    <div class="fingers"></div>
-                </div>
-                <div id="armright" class="arm right">
-                    <div class="top-arm"></div>
-                    <div class="bottom-arm"></div>
-                    <div class="hand-right"></div>
-                    <div class="finger"></div>
-                    <div class="fingers"></div>
-                </div>
-
-                <div class="bottom">
-                    <div class="belt"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="leg left">
-                    <div class="pant"></div>
-                    <div class="tibia">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                    </div>
-                    <div class="boot-left">
-                        <div class="main">
-                            <div class="boot-line"></div>
-                        </div>
-                        <div class="end"></div>
-                        <div class="sole">
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="leg right">
-                    <div class="pant"></div>
-                    <div class="tibia">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                    </div>
-                    <div class="boot-right">
-                        <div class="main">
-                            <div class="boot-line"></div>
-                        </div>
-                        <div class="end"></div>
-                        <div class="sole">
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                            <div class="crampon"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
-
-        </div>-->
-
+            
     </section>
     <!-- End Home Section -->
     <!-- Navigation -->
@@ -693,107 +575,124 @@
             <!--<div id="planet-icon-skills" style="display:none;" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>-->
             <div id="planet">
                 <table>
-                    <tr><td onclick="togglePlanet('Pluto','0.071','0.186','6.39','0.0025','2357' );">Pluto</td></tr>
-                    <tr><td onclick="togglePlanet('Neptune','1.12','3.88','0.671','17.1','2364');">Neptune</td></tr>
-                    <tr><td onclick="togglePlanet('Uranus','0.889','4.01','0.718','14.5','2344');">Uranus</td></tr>
-                    <tr><td onclick="togglePlanet('Saturn','0.916','9.45','0.444','95.2','2355');">Saturn</td></tr>
-                    <tr><td onclick="togglePlanet('Jupiter','2.36','11.21','0.414','317.8','2375');">Jupiter</td></tr>
-                    <tr><td onclick="togglePlanet('Mars','0.377','0.532','1.03','0.107','2372');">Mars</td></tr>
-                    <tr><td onclick="togglePlanet('Earth','1','1','1','1','2392');">Earth</td></tr>
-                    <tr><td onclick="togglePlanet('Venus','0.907','0.949','116.8','0.815','2342');">Venus</td></tr>
-                    <tr><td onclick="togglePlanet('Mercury','0.378','0.383','175.9','0.0553','2369');">Mercury</td></tr>
+                    <tr><td onclick="togglePlanet('Pluto','0.7','-225','6.39','0.0025','2357', '5' );">Pluto</td></tr>
+                    <tr><td onclick="togglePlanet('Neptune','11','-200','0.671','17.1','2364','14');">Neptune</td></tr>
+                    <tr><td onclick="togglePlanet('Uranus','8.7','-195','0.718','14.5','2344','27');">Uranus</td></tr>
+                    <tr><td onclick="togglePlanet('Saturn','9','-140','0.444','95.2','2355','82');">Saturn</td></tr>
+                    <tr><td onclick="togglePlanet('Jupiter','23','-110','0.414','317.8','2375','79');">Jupiter</td></tr>
+                    <tr><td onclick="togglePlanet('Mars','3.7','-65','1.03','0.107','2372', '2');">Mars</td></tr>
+                    <tr><td onclick="togglePlanet('Earth','9.8','15','1','1','2392','1');">Earth</td></tr>
+                    <tr><td onclick="togglePlanet('Venus','8.9','464','116.8','0.815','2342','0');">Venus</td></tr>
+                    <tr><td onclick="togglePlanet('Mercury','3.7','167','175.9','0.0553','2369','0');">Mercury</td></tr>
                 </table>
 
                 <script>
-                    var VenusDesc = "Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star."
-                    var PlutoDesc = "Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm.";
+                    var PlutoDesc = "Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar system.";
                     var NeptuneDesc = "Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846.";
                     var UranusDesc = "The first planet to be discovered by scientists. The planet is notable for its dramatic tilt, which causes its axis to point nearly directly at the sun.";
                     var SaturnDesc = "Saturn is the sixth planet from the sun and the second largest planet in the solar systm. Saturn was the Roman name for Cronus, the lord of the Titans.";
                     var JupiterDesc = "Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology.";
                     var MarsDesc = "Fourth planet from the Sun and the second smallest planet in the solar systm. Named after the Roman god of war often described as the “Red Planet”.";
                     var EarthDesc = "Earth, our home. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.";
+                    var VenusDesc = "Named for the Roman goddess of love and beauty. In ancient times, Venus was often thought to be two different stars, the evening star and the morning star."
                     var MercuryDesc = "The closest planet to the sun. It circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.";
 
+                    // document.getElementById("planetDesc").innerHTML = EarthDesc;
 
-                    function togglePlanet(Planet, gravity, diameter, length, mass, Code3d) {
-                        // planetDesc
+                    function togglePlanet(Planet, gravity, diameter, length, mass, Code3d, moon) {
                         var PlanetDesc = eval(Planet + "Desc");
                         var PlanetSrc = "https://solarsystem.nasa.gov/gltf_embed/" + Code3d;
-                        // var planetframe = '<iframe id="Earth"   class="planet3d" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="100%" height="350" frameborder="0" />'
                         document.getElementById("planetDesc").innerHTML = PlanetDesc;
+                        document.getElementById("soundDesc").innerHTML = "🎧 Listen to The Sound of " + Planet + "🎧";
                         document.getElementById("Earth").src = PlanetSrc;
+                        document.getElementById("glow").innerHTML = Planet;
                         // below is the previous version using planets Icons
                         //document.getElementById("planet-icon-skills").style.backgroundImage = "url('img/" + Planet + ".ico')";
                         // we are heading into more realistic nasa 3D images
-                        document.getElementById("glow").innerHTML = Planet;
-                        // Chande the class to houston  // document.getElementById("chat").innerHTML = Planet;
+                        // Change the class to houston  // document.getElementById("chat").innerHTML = Planet;
                         // document.getElementById("gravity").innerHTML = 'Gravity';
                         //
                         // document.getElementById("diameter").innerHTML = 'Diameter';
                         // document.getElementById("length").innerHTML = 'Length of the Day';
                         // document.getElementById("mass").innerHTML = 'Mass';
+                        var len = length * 24;
 
-                        var grav = (gravity * 100) / 3;
-                        var diam = (diameter * 100) / 12;
-                        var len = (length * 100) / 180;
-                        var ma = (mass * 100) / 317;
+                        animateNumbers("#grav", gravity);
+                        animateNumbers("#temp", diameter);
+                        animateNumbers("#length", length);
+                        animateNumbers("#mass", mass);
+                        animateNumbers("#moon", moon);
 
                         //Number Incrementation Animation for Planets (ex : gravity)
-
                         //Animate my counter from 0 to set number (6)
+                        function animateNumbers(id,end) {
+                            $(id).each(function() {
+                                var $this = $(this);
 
-                        var from = 0;
-                        var to = 40;
+                                var num = Number(end);
+                                var roundedString = num.toFixed(1);
+                                var countTo = Number(roundedString);
 
-                        $({ counter: from }).animate(
-                            { counter: to },
+                                $({ countNum: $this.text() }).animate({
+                                countNum: countTo
+                            },
+                            
                             {
-                                //Animate over a period of 2seconds
-                                duration: 2000,
-                                //Progress animation at constant pace using linear
-                                easing: "linear",
+                                duration: 1000,
+                                easing:'linear',
                                 step: function () {
-                                    //Every step of the animation, update the number value
-                                    //Use ceil to round up to the nearest whole int
-                                    $(".total").text(Math.ceil(this.counter));
+                                    var numcount = Number(this.countNum);
+                                    var roundedString = numcount.toFixed(1);
+                                    this.countNum = Number(roundedString);
+                                    $this.text(this.countNum);
                                 },
                                 complete: function () {
-                                    //Could add in some extra animations, like a bounc of colour change once the count up is complete.
+                                    $("#moon").text(Math.round(moon));
+                                    $("#length").text(Math.round(len));
+                                // $this.text(this.countNum);
                                 }
-                            }
-                        );
+                            });
+                            });
+                        }
+                        
 
 
-                        //document.getElementById("gravprog").style.width = grav + '%';
-                        //document.getElementById("diamprog").style.width = diam + '%';
-                        //document.getElementById("lenprog").style.width = len + '%';
-                        //document.getElementById("massprog").style.width = ma + '%';
+                        // document.getElementById("gravprog").style.width = grav + '%';
+                        // document.getElementById("diamprog").style.width = diam + '%';
+                        // document.getElementById("lenprog").style.width = len + '%';
+                        // document.getElementById("massprog").style.width = ma + '%';
 
-                        //document.getElementById("gravprog").innerHTML = '<span>' + gravity + ' (m/s2) </span>';
-                        //document.getElementById("diamprog").innerHTML = '<span>' + Math.round(diameter * 12.756).toFixed(2) + ' (km) </span>';
-                        //document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
-                        //document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
+                        // document.getElementById("gravprog").innerHTML = '<span>' + gravity + ' (m/s2) </span>';
+                        // document.getElementById("diamprog").innerHTML = '<span>' + Math.round(diameter * 12.756).toFixed(2) + ' (km) </span>';
+                        // document.getElementById("lenprog").innerHTML = '<span>' + Math.round(length * 24).toFixed(2) + ' (hours) </span>';
+                        // document.getElementById("massprog").innerHTML = '<span>' + (ma * 5.97).toFixed(5) + ' (10^24kg) </span>';
 
                         // Planet Sound
-                        var x = document.getElementById("planet-icon-skills");
-                        var audio = new Audio("assets/planetsound/" + Planet + ".mp3");
-                        x.onmousedown = function () {
-                            audio.play();
-                            document.getElementById("planet-icon-skills").style.animation = "spin 0.5s linear infinite";
 
-                        };
-                        x.onmouseup = function () {
-                            audio.pause();
-                            document.getElementById("planet-icon-skills").style.animation = "spin 1.4s linear infinite";
-                        };
 
-                        // END Planet Sound
-                        /*document.getElementById("testa").css('width', document.getElementById("testa").attr('aria-valuenow')+'44%');*/
-                        /*document.getElementById("screen").style.animation='blinker 1.1s linear 1';
-                        //document.getElementById("example4").innerHTML='THANK YOU';
-                        //document.getElementById("face-panel").style.animationPlayState='paused';
-                        $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){document.getElementById("chat").innerHTML='THANK YOU ♥ ';});*/
+                        var audio = document.getElementById("audioTime");
+                        audio.src = "assets/planetsound/" + Planet + ".mp3"
+
+                        // var x = document.getElementById("planet");
+                        // var audio = new Audio("assets/planetsound/" + Planet + ".mp3");
+                        
+                        // audio.attr('controls',true).appendTo(selector);
+                        // x.onclick = function () {
+                            // audio.play();
+                            // x.style.animation = "spin 0.5s linear infinite";
+                        // };
+
+                        //x.onmousedown = function () {
+                        //    audio.play();
+                        //    x.style.animation = "spin 0.5s linear infinite";
+                        //};
+                        //x.onmouseup = function () {
+                        //    audio.pause();
+                        //    x.style.animation = "spin 1.4s linear infinite";
+                        //};
+
+                        // Uncomment Later
+                        // END Planet SOUND
                     }
 
                     function PlayState(newState) {
@@ -806,41 +705,55 @@
                         document.getElementById("glow").className += ' shake-hard shake-constant';
                         document.getElementById("glow").style.animationPlayState = newState;
                         document.getElementById("chat").innerHTML = 'STOP IT !';
-
-                        //document.getElementById("example4").innerHTML='THANK YOU';
-                        //document.getElementById("face-panel").style.animationPlayState='paused';
                         $("#battery").one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function () { document.getElementById("chat").innerHTML = 'Thank You ♥ '; });
                     }
                 </script>
-                <!--<img src="img/planets.jpg" >-->
             </div>
+
             <div id="skillrow">
                 <div class='solar_systm'>
                     <div class='planet venus'>
                         <div class='planet_description venus'>
-                            <p id="planetDesc"></p>
-                            <!--<label for='readVenus'>-->
+                            <p id="planetDesc">
+                                Earth, our home. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.
+                            </p>
                             <div class="info-nbr">
-                                <span class="total">44</span>
-                                <br />Gravity
+                                <span id="grav" class="total">9.8</span>
+                                <br />Gravity (m/s2)
                             </div>
                             <div class="info-nbr">
-                                <span class="total">44</span>
-                                <br />Gravity
+                                <span id="temp" class="total">15</span>
+                                <br />Temperature (C)
                             </div>
-                                <!--</label>-->
+                            <!--<div class="info-nbr">
+                                <span id="diam" class="total">1</span><i class="lowcase">x</i>
+                                <br />DIAMETER
+                            </div>-->
+                            <div class="info-nbr">
+                                <span id="length" class="total">24</span>
+                                <br />hour/Day
                             </div>
-                            <!--<div class='overlay'></div>-->
-                            <br /><br /><br />
+                            <!--<div class="info-nbr">
+                                <span id="mass" class="total">1</span><i class="lowcase">x</i>
+                                <br />Mass
+                            </div>-->
+                            <div class="info-nbr">
+                                <span id="moon" class="total">1</span>
+                                <br />Moons
+                            </div>
+
+                            <p id="soundDesc">🎧 Listen to The Sound of Earth 🎧</p>
+
+                            <audio controls id="audioTime">
+                                <source src="assets/planetsound/Earth.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
                         </div>
+                    </div>
                 </div>
             </div>
-            <!--<div id="info-box">
-                <h1>Gravity</h1>
-                <span class="total">44</span>
-            </div>-->
             <div id="nasa3d">
-                <iframe id="Earth" class="planet3d" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="100%" height="350" frameborder="0" />
+                <iframe id="Earth" class="planet3d" src="https://solarsystem.nasa.gov/gltf_embed/2392" width="100%" height="350" frameborder="0" > </iframe>
             </div>
         </div><!-- /.container -->
     </section>
@@ -1101,87 +1014,6 @@
     <section id="blog" class="latest-blog-section section-padding">
         <div class="container">
             <h2 class="section-title wow fadeInUp">Latest Post</h2>
-            
-
-            <div id="myModal2" class="modal2">
-                <!-- Modal content -->
-                <div class="modal-content2">
-                    <span class="close">&times;</span>
-                    <div class="color-1">
-                        <div class="containerblog">
-                            <!-- Top Navigation -->
-                            <div class="contentblog">
-                                <header style="background: #68c3a3; background-size:150% 30%; " class="codrops-header">
-                                    <h1>TOP FUNNY FACTS ABOUT ME</h1>
-                                </header>
-                                <div class="dummy dummy-text">
-                                    <br><br><br>
-
-                                    <h1 style="text-align:center;">#1</h1>
-
-                                    <blockquote>it took me <strong> 3 </strong> beers or <strong>2</strong> glasses of wine to get drunk </blockquote>
-                                    <h1 style="text-align:center;">#2</h1>
-
-                                    <blockquote>in 2014 i was living alone in a big flat, i met two women in a bar they have nowhere to go, i felt sorry for them so decided to let them stay in my house until they find an appartment <br> it wasn't a problem for me because i stay all day at the university and come home late<br>it took me <strong> 4 </strong> months to discover that those girls are whores and my house is the most known whorehouse in the hood </blockquote>
-                                    <h1 style="text-align:center;">#3</h1>
-                                    <blockquote> i once was looking for my glasses in the house, i couldn't see well so i went looking for my glasses to find my glasses. now thats a nice Loop.</blockquote>
-                                    <h1 style="text-align:center;">#4</h1>
-                                    <blockquote> this year i saw a traffic jam and cars are honking because a guy walking in the middle of the road holding his pitbull on a cow wearing beats wireless headphones.<br> just imagine it...Thug Life in it's finest moment </blockquote>
-
-                                    <h1 style="text-align:center;">#5</h1>
-                                    <blockquote>in 2015 my friend needed to pass the java exam so bad, he begged me to pass the exam in his place, i went to his university enter the class sit down and pass a perfect exam and went out, when i reached the door i realized that i wrote my name instead of his in the exam paper  </blockquote>
-
-                                </div>
-                                <!-- Related demos -->
-                            </div><!-- /content -->
-                        </div><!-- /container -->
-                    </div>
-                </div>
-            </div>
-
-            <div id="myModal4" class="modal4">
-                <!-- Modal content -->
-                <div class="modal-content4">
-                    <span class="close">&times;</span>
-                    <div class="color-2">
-                        <div class="containerblog">
-                            <!-- Top Navigation -->
-                            <div class="contentblog">
-                                <img src="img/kantoor-foursites.jpg" />
-                                <br><br><br>
-
-                                <div id="planet-icon1" onmouseup="PlayState('paused');" onmousedown="PlayState('running');"></div>
-                                <br><br><br><br><br>
-                                <div class="dummy dummy-text">
-                                    <br><br><br>
-                                    <p>
-                                        <strong>Dear Foursites</strong><br>
-                                        Regarding the Back-End Developer TRAINEE position currently advertised on AIESEC , I’m looking to gain practical experience and feel that a TRAINEE position within Foursites Team would help me to demonstrate the abilities I have.<br>
-                                        I have done many freelances for companies around the world using CMS mostly Wordpress.<br> developing websites from scratch for those companies made me gain practical experience in web development and how to deal with clients professionally to win their respect and satisfaction.<br>
-                                        Involved with entrepreneurship and very familiar with the best technologies as Software Developer and Web Developer. I am always trying to make my own projects which gave me some other skills like (Leadership, project management, communication skills...) <br>
-                                        <strong>▪ Good OOP development experience </strong><br>
-                                        <strong>▪ Good understanding of multiple programming languages including: Java, C#, PHP, JavaScript, HTML5, and XML. </strong><br>
-                                        <strong>▪ Excellent communications skills. </strong><br>
-                                        <strong>▪ Adept at building strong working relationships with co-workers and management. </strong><br>
-                                        <strong>▪ Talented problem solver able to think “outside the box.” </strong><br>
-                                        <strong>▪ Lean Start-up experience.</strong><br>
-                                        I look forward to hearing from you soon.<br>
-                                        Yours sincerely, <br>
-                                        <strong>Mohamed Hajjej</strong>
-                                    </p>
-
-                                </div>
-                                <!-- Related demos -->
-
-                            </div><!-- /content -->
-                        </div><!-- /container -->
-                    </div>
-                </div>
-            </div>
-
-
-
-
             <div class="row">
                 <div id="blog1" class="col-sm-4">
                     <article class="blog-post-wrapper">

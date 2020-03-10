@@ -209,8 +209,10 @@ $(window).scroll(function () {
        
     }
     else {
+        //document.getElementById('dropcord').style.display = 'none';
+
+
         // document.getElementById('astro-wrap-shela').style.display = 'none';
-        document.getElementById('dropcord').style.display = 'none';
         // console.log(document.getElementById('airpressure').style.left);
         if (document.getElementById('airpressure').style.left == "72%") {
             document.getElementById('airpressure').style.display = 'none';
@@ -299,27 +301,18 @@ let y3Forward = true;
 
 function animate() {
     requestAnimationFrame(animate);
-
-
-    
-
     var gradient = ctx.createLinearGradient(0, 0, 170, 0);
     gradient.addColorStop("0", "#A9A9A9");// dark grey
     gradient.addColorStop("1.0", "#F5F5F5");// white smoke
     gradient.addColorStop("0.5", "#A9A9A9");
-
     // Fill with gradient
    
-
-
-
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     ctx.beginPath();
     // ADDED 300 PX
     ctx.moveTo(150, 150);
     ctx.bezierCurveTo(70, y1, 355, y2, -200, y3);
     // ctx.bezierCurveTo(250, y1, 345, y2, -90, y3);
-
     // ctx.strokeStyle = 'white';
     ctx.strokeStyle = gradient;
     ctx.lineWidth = 8;
@@ -327,7 +320,6 @@ function animate() {
     // ctx.strokeRect(20, 20, 150, 100);
     //ctx.lineHeight = 180;
     ctx.stroke();
-
 
     if (y1 === 100) {
         y1Forward = true;
@@ -357,7 +349,6 @@ function animate() {
     y2Forward ? y2 += 1 : y2 -= 1;
     // y3Forward ? y3 += 1 : y3 -= 1;
 }
-
 // drawVisor();
 animate();
 

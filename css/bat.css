@@ -404,7 +404,7 @@ td:active {
 #nasa3d {
     position: absolute;
     left: 21%;
-    top: 15%;
+    top: 13%;
     z-index: 100;
     width: 50%;
 }
@@ -475,9 +475,9 @@ td:active {
     }
 
 body .solar_systm .planet_description {
-    width: 420px;
+    width: 620px;
     text-align: center;
-    margin-left: 70%;
+    margin-left: 30%;
     color: white;
     font-weight: 200;
     -webkit-transition: all .4s 0s;
@@ -498,6 +498,12 @@ body .solar_systm .planet_description {
        display:inline-block;
        padding:10px;
     }
+    body .solar_systm .planet_description .lowcase {
+        text-transform: lowercase;
+        /*font-weight: 800;*/
+        font-size: x-large;
+        text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+    }
 
     /* info-nbr */
     body .solar_systm .planet_description span {
@@ -506,7 +512,7 @@ body .solar_systm .planet_description {
         margin-top: 14px;
         text-transform: uppercase;
         margin-bottom: 10px;
-        font-weight: 800;
+        font-weight: 400;
         font-size:xx-large;
         /**/
         text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
@@ -725,4 +731,14 @@ video#watchMe {
     right: 13%;
     z-index:9999;
     transform:rotate(180deg);
+}
+
+
+audio {
+    margin-bottom:10px;
+    width: 80%;
+    height:20px;
+    box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+    border-radius: 90px;
+    transform: scale(1.05);
 }
