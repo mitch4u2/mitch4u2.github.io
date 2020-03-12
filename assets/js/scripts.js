@@ -169,6 +169,9 @@ jQuery(function ($) {
             itemSelector: '.portfolio-item'
         });
 
+        // $('#filter a').removeClass('active');
+        // $(this).addClass('active');
+        $grid.shuffle('shuffle', 'front');
         /* reshuffle when user clicks a filter item */
         $('#filter a').click(function (e) {
             e.preventDefault();

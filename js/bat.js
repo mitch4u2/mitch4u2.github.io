@@ -184,7 +184,7 @@ window.onclick = function(event) {
 
 
 $(window).scroll(function () {
-    // console.log($(window).scrollTop());
+       // console.log($(window).scrollTop());
     if ($(window).scrollTop() > 700) {
         document.getElementById('blackhole').style.display = 'none';
         //document.getElementById('astrocord').style.transform = 'rotate(-190deg)';
@@ -201,26 +201,27 @@ $(window).scroll(function () {
         //document.getElementById('astrocord').style.left = '-185px';
         //document.getElementById('astrocord').style.top = '-21%';
     }
-    if ($(window).scrollTop() > 5000)
+    if ($(window).scrollTop() > 5400)
     {
         document.getElementById('astro-wrap-shela').style.display = 'block';
         document.getElementById('dropcord').style.display = 'block';
         document.getElementById('airpressure').style.display = 'block';
-       
+        document.getElementById("droppoint").style.display = 'block';
     }
     else {
         //document.getElementById('dropcord').style.display = 'none';
 
-
-        // document.getElementById('astro-wrap-shela').style.display = 'none';
+        document.getElementById('astro-wrap-shela').style.display = 'none';
         // console.log(document.getElementById('airpressure').style.left);
         if (document.getElementById('airpressure').style.left == "72%") {
+            // console.log("Hello Mo 72");
             document.getElementById('airpressure').style.display = 'none';
         }
-        //if (document.getElementById('airpressure').style.left > "50%") {
-        //    consol.log("Hello Mo");
-        //    // document.getElementById('airpressure').style.display = 'none';
-        //}
+        if (document.getElementById('airpressure').style.left > "50%") {
+            // console.log("Hello Mo 50");
+            document.getElementById('airpressure').style.display = 'none';
+            document.getElementById("droppoint").style.display = 'none';
+        }
         // document.getElementById('airpressure').style.display = 'none';
 
     }

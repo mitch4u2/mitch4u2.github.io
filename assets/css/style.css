@@ -793,8 +793,27 @@ Resume Timeline
 .timeline-content{
     padding:5px 0px 0 20px;
 }
+.comp-logo {
+    left:0;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.comp-logo-inverse {
+    right: 0;
+    width: 27%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.comp-img {
+    width: 100%;
+    height: 100%;
+    padding:5px;
+}
 
-.timeline>li .timeline-panel:before {
+.timeline > li .timeline-panel:before {
     right: auto;
     left: -15px;
     border-right-width: 15px;
@@ -1002,7 +1021,7 @@ Resume Timeline
 
 
 /* === Skill Section === */
-.skills-section {
+    .skills-section {
     /*background: url('../../img/demo-1-bg.jpg') no-repeat center center;*/
     background-color: black;
     background-size: cover;
